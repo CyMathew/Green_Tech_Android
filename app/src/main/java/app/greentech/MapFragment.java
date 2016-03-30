@@ -31,6 +31,11 @@ public class MapFragment extends Fragment {
 
     public static MapView mapView;
 
+    //TODO: Add all recycling bin markers
+    //TODO: Add water refilling stations
+    //TODO: Add descriptive info to info boxes on markers
+
+    //TODO: Use newer getMapAsync() rather than dep getMap()
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,7 +44,6 @@ public class MapFragment extends Fragment {
                 container, false);
         try
         {
-
             // Gets the MapView from the XML layout and creates it
             mapView = (MapView) v.findViewById(R.id.mapview);
 
@@ -59,8 +63,9 @@ public class MapFragment extends Fragment {
                 mMap.setMyLocationEnabled(false);}
             catch (SecurityException e) {};
 
+
             // Enable / Disable zooming controls
-            mMap.getUiSettings().setZoomControlsEnabled(true);
+            mMap.getUiSettings().setZoomControlsEnabled(false);
 
             // Enable / Disable my location button
             mMap.getUiSettings().setMyLocationButtonEnabled(true);
@@ -75,12 +80,24 @@ public class MapFragment extends Fragment {
             mMap.getUiSettings().setZoomGesturesEnabled(true);
 
             MapsInitializer.initialize(this.getActivity());
+
+            setupMap();
         }
         catch(Exception e)
         {
             System.out.println(e);
         }
         return v;
+    }
+
+    private void setupMap()
+    {
+        mMap.addMarker(new MarkerOptions().position(new LatLng(33.586513, -101.883885))).setTitle("First Marker");
+
+        //default camera location
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
+
+        //TODO: dynamic camera location/zoom based on user location
     }
 
     @Override
