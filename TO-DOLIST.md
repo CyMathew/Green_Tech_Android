@@ -4,3 +4,7 @@
 - [ ] Add descriptive info to info boxes on makers
 - [ ] Use getMapAsync() rather than getMap()
 - [ ] dynamic camera location based on user location
+
+
+#Note
+- [x] DONE TODO
