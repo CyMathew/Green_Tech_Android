@@ -7,4 +7,4 @@
 
 
 #Note
-- [x] ~ DONE TODO ~
+- [x] <del> DONE TODO </del>
