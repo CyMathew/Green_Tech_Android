@@ -1,7 +1,7 @@
 #To-do List
 This list contains all current to-dos for Green Tech Project.
 
-##Map
+###Map
 - [ ] Add all recycling markers
 - [ ] Add all water refilling stations
 - [ ] Add descriptive info to info boxes on makers
@@ -10,29 +10,29 @@ This list contains all current to-dos for Green Tech Project.
 - [ ] Filter markers/list based on Water/Recycle options
 - [ ] List of all nearby markers for quick access
 
-##Tips/Links/FAQs
+###Tips/Links/FAQs
 - [ ] Add proper tips
 - [ ] Add helpful links
 - [ ] Add FAQs
 
-##Login
+###Login
 - [ ] Add login screen
 - [ ] Ability to register username/pw through database
 - [ ] Google Login
 - [ ] Facebook Login
 
-##Stats
+###Stats
 - [ ] Implement a graph drawer for stats activity
 - [ ] Determine which stats need to be tracked
 
-##Settings
+###Settings
 - [ ] Set up proper settings list
 - [ ] Use SharedPreferences
 
-##Social
+###Social
 - [ ] Add Rivals to compare stats against
 
-##Misc
+###Misc
 - [ ] Create connection with Database
 - [ ] Barcode scanner
 - [ ] Questionnaire for quick guidance
