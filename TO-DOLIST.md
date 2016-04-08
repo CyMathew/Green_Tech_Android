@@ -4,6 +4,8 @@
 - [ ] Add descriptive info to info boxes on makers
 - [ ] Use getMapAsync() rather than getMap()
 - [ ] dynamic camera location based on user location
+- [ ] Filter markers/list based on Water/Recycle options
+- [ ] List of all nearby markers for quick access
 
 #Tips/Links/FAQs
 - [ ] Add proper tips
@@ -29,5 +31,5 @@
 
 #Misc
 - [ ] Create connection with Database
-
-
+- [ ] Barcode scanner
+- [ ] Questionnaire for quick guidance
