@@ -2,6 +2,7 @@ package app.greentech;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -74,12 +75,20 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        toolbar.setTitle("Map");
+        //toolbar.setTitle("Map");
+
+        login();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
+    }
+
+    public void login()
+    {
+        Intent intent_Login = new Intent(this, LoginActivity.class);
+        startActivity(intent_Login);
     }
 
     @Override
