@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity
         tipsFrag = new TipsFragment();
         settingsFrag = new SettingsFragment();
 
-
         fragment = mapFrag;
         fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
@@ -74,6 +73,8 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        toolbar.setTitle("Map");
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -122,24 +123,31 @@ public class MainActivity extends AppCompatActivity
         switch (id)
         {
             case R.id.nav_stats:
+                toolbar.setTitle("Statistics");
                 fragment = statFrag;
                 break;
             case R.id.nav_map:
+                toolbar.setTitle("Map");
                 fragment = mapFrag;
                 break;
             case R.id.nav_social:
+                toolbar.setTitle("Social");
                 fragment = socialFrag;
                 break;
             case R.id.nav_links:
+                toolbar.setTitle("Links");
                 fragment = linksFrag;
                 break;
             case R.id.nav_faq:
+                toolbar.setTitle("FAQs");
                 fragment = faqFrag;
                 break;
             case R.id.nav_tips:
+                toolbar.setTitle("Tips");
                 fragment = tipsFrag;
                 break;
             case R.id.nav_settings:
+                toolbar.setTitle("Settings");
                 fragment = settingsFrag;
                 break;
             default:

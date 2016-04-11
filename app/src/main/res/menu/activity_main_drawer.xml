@@ -16,25 +16,27 @@
             android:title="Social" />
     </group>
 
-    <item android:title="Misc">
-        <menu>
-            <item
-                android:id="@+id/nav_links"
-                android:icon="@drawable/ic_links"
-                android:title="Links" />
-            <item
-                android:id="@+id/nav_faq"
-                android:icon="@drawable/ic_faqs"
-                android:title="FAQs" />
-            <item
-                android:id="@+id/nav_tips"
-                android:icon="@drawable/ic_tips"
-                android:title="Tips" />
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_settings"
-                android:title="Settings" />
-        </menu>
-    </item>
+    <group android:checkableBehavior="single">
+        <item android:title="Misc">
+            <menu>
+                <item
+                    android:id="@+id/nav_links"
+                    android:icon="@drawable/ic_links"
+                    android:title="Links" />
+                <item
+                    android:id="@+id/nav_faq"
+                    android:icon="@drawable/ic_faqs"
+                    android:title="FAQs" />
+                <item
+                    android:id="@+id/nav_tips"
+                    android:icon="@drawable/ic_tips"
+                    android:title="Tips" />
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_settings"
+                    android:title="Settings" />
+            </menu>
+        </item>
+    </group>
 
 </menu>

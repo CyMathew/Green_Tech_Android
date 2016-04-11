@@ -12,7 +12,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="dialog Title">
+        android:title="Dialog Title">
 
         <EditTextPreference
             android:key="edittext_preference"
@@ -63,7 +63,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="preference attribute title">
+        android:title="Preference Attribute Title">
 
         <CheckBoxPreference
             android:key="parent_checkbox_preference"
