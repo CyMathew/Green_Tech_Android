@@ -18,9 +18,9 @@
 ####Login
 - [x] ~~Add login screen~~       *Cyril*
 - [ ] Tabbed Interface with options to Sign In and Register seperated
-- [ ] Ability to register username/pw through database
-- [ ] Google Login
-- [ ] Facebook Login
+- [ ] Ability to register username/pw through database *Aashish*
+- [ ] Google Login *Aashish*
+- [ ] Facebook Login *Aashish*
 
 ####Stats
 - [ ] Implement a graph drawer for stats activity
@@ -31,7 +31,7 @@
 - [ ] Use SharedPreferences
 
 ####Social
-- [ ] Add Rivals to compare stats against
+- [ ] Add Rivals to compare stats against *Aashish* (social graph)
 
 ####Misc
 - [ ] Create connection with Database
