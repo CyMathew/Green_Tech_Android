@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="049511e47c0eabd87a3b81bb1ecd42e8b3ba3817">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b17cce1b19a7395d190fcc4fffaf4432318c3430/classes.dex" />
+    </item>
+
+</items>

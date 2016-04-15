@@ -84,21 +84,13 @@
                 android:padding="0dp"
                 android:src="@drawable/img_login_google"/>
 
-                <ImageButton
-                    android:id="@+id/btn_facebook_login"
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/btn_fb_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:scaleX="1.6"
-                    android:scaleY="1.7"
-                    android:padding="0dp"
-                    android:translationY="-.1dp"
-                    android:src="@drawable/img_login_facebook"
-                    android:layout_marginRight="33dp"
-                    android:layout_marginEnd="33dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp" />
 
             </RelativeLayout>
 
