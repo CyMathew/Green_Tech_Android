@@ -35,4 +35,8 @@
 
     <!-- Strings related to facebook login -->
     <string name="facebook_app_id">615392475284870</string>
+
+    <!-- String related to Google Login-->
+    <string name="pick_account">Unable to log in</string>
+    <string name="not_online">The device is not online</string>
 </resources>
