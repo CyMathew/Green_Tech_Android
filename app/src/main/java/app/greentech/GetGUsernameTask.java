@@ -11,6 +11,8 @@ import java.io.IOException;
 
 /**
  * Created by Cyril on 4/15/2016.
+ *
+ * Used for Async Background retrieval of Google Account Tokens
  */
 public class GetGUsernameTask extends AsyncTask<Void, Void, Void>
 {
@@ -31,7 +33,7 @@ public class GetGUsernameTask extends AsyncTask<Void, Void, Void>
      * on the AsyncTask instance.
      */
     @Override
-    protected Void doInBackground(Void[] params)
+    protected Void doInBackground(Void... params)
     {
         try {
         String token = fetchToken();

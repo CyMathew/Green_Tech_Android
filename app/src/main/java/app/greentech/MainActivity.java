@@ -3,6 +3,7 @@ package app.greentech;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,28 +15,27 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.facebook.FacebookSdk;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
     FloatingActionButton fab;
     DrawerLayout drawer;
     NavigationView navigationView;
+    SharedPreferences preferences;
+
     FragmentManager fragmentManager;
     Fragment fragment;
-
-    MapFragment mapFrag;
-    StatsFragment statFrag;
-    SocialFragment socialFrag;
-    LinksFragment linksFrag;
-    FaqFragment faqFrag;
-    TipsFragment tipsFrag;
-    SettingsFragment settingsFrag;
+    Fragment_Map mapFrag;
+    Fragment_Stats statFrag;
+    Fragment_Social socialFrag;
+    Fragment_Links linksFrag;
+    Fragment_Faq faqFrag;
+    Fragment_Tips tipsFrag;
+    Fragment_Settings settingsFrag;
 
 
     @Override
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
+        preferences = getPreferences(0);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -58,13 +59,13 @@ public class MainActivity extends AppCompatActivity
         });
         fab.hide();
 
-        mapFrag = new MapFragment();
-        statFrag = new StatsFragment();
-        socialFrag = new SocialFragment();
-        linksFrag = new LinksFragment();
-        faqFrag = new FaqFragment();
-        tipsFrag = new TipsFragment();
-        settingsFrag = new SettingsFragment();
+        mapFrag = new Fragment_Map();
+        statFrag = new Fragment_Stats();
+        socialFrag = new Fragment_Social();
+        linksFrag = new Fragment_Links();
+        faqFrag = new Fragment_Faq();
+        tipsFrag = new Fragment_Tips();
+        settingsFrag = new Fragment_Settings();
 
         fragment = mapFrag;
         fragmentManager = getFragmentManager();
@@ -81,19 +82,20 @@ public class MainActivity extends AppCompatActivity
 
         //toolbar.setTitle("Map");
 
-        login();
+        initLogin();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
     }
 
-    public void login()
+    private void initLogin()
     {
-        Intent intent_Login = new Intent(this, LoginActivity.class);
-        startActivity(intent_Login);
+        if (!(preferences.getBoolean(getString(R.string.is_logged_in), false))) {
+            Intent intent_Login = new Intent(this, LoginActivity.class);
+            startActivity(intent_Login);
+        }
     }
+
 
     @Override
     public void onBackPressed() {
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -165,7 +167,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             default:
                 Log.i("Info", "How did you get here?!");
-
+                break;
         }
 
         // Insert the fragment by replacing any existing fragment

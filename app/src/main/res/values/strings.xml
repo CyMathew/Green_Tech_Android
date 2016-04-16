@@ -29,9 +29,20 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="base_url">http://10.0.2.2/</string>
+    <string name="operation_register">register</string>
+    <string name="operation_login">login</string>
+    <string name="operation_change_pass">chgPass</string>
+    <string name="initiate_reset_pass">resPassReq</string>
+    <string name="finish_reset_pass">resPass</string>
+    <string name="success">success</string>
+    <string name="failure">failure</string>
+    <string name="is_logged_in">isLoggedIn</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="unique_id">unique_id</string>
+    <string name="tag">Learn2Crack</string>
 
     <!-- Strings related to facebook login -->
     <string name="facebook_app_id">615392475284870</string>
