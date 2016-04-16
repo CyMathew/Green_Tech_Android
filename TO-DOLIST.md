@@ -17,7 +17,7 @@
 
 ####Login
 - [x] ~~Add login screen~~       *Cyril*
-- [ ] Tabbed Interface with options to Sign In and Register seperated
+- [x] ~~Buttons for options to Sign In and Register seperated~~ *Cyril*
 - [ ] Ability to register username/pw through database *Aashish*
 - [ ] Google Login *Aashish*
 - [ ] Facebook Login *Aashish*
