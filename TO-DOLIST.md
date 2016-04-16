@@ -37,3 +37,7 @@
 - [ ] Create connection with Database
 - [ ] Barcode scanner
 - [ ] Questionnaire for quick guidance
+ 
+######Stretch Goals
+- [ ] Notifications
+- [ ] Events Notifier System
