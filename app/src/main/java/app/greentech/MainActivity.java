@@ -2,6 +2,7 @@ package app.greentech;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
 
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Fragment_Tips tipsFrag;
     Fragment_Settings settingsFrag;
 
+    TextView nav_TV_user;
+    TextView nav_TV_email;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
-        preferences = getPreferences(0);
+        preferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -86,6 +91,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        nav_TV_user = (TextView) findViewById(R.id.nav_username);
+        nav_TV_email = (TextView) findViewById(R.id.nav_email);
     }
 
     private void initLogin()
@@ -96,6 +104,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //nav_TV_user.setText(preferences.getString("Username", ""));
+        //nav_TV_email.setText(preferences.getString("Email", ""));
+    }
 
     @Override
     public void onBackPressed() {

@@ -2,6 +2,8 @@ package app.greentech;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -17,9 +19,12 @@ import android.widget.TextView;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.SignInButton;
+
+import java.util.Arrays;
 
 import app.greentech.Models.ServerRequest;
 import app.greentech.Models.ServerResponse;
@@ -37,7 +42,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     private EditText et_email, et_password;
     private TextView tv_register, tv_reset_password;
     private ProgressBar progress;
-    private SharedPreferences pref;
+    private SharedPreferences preferences;
 
     private LoginButton fbLoginButton;
     private SignInButton gLoginButton;
@@ -58,12 +63,21 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         fbLoginButton.setFragment(this);
 
         // Other app specific specialization
+        gLoginButton = (SignInButton) view.findViewById(R.id.btn_google_login);
+        gLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //pickUserAccount();
+            }
+        });
+        initViews(view);
 
         // Callback registration
         fbLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 // App code
+                saveInfo();
                 getActivity().finish();
             }
 
@@ -78,22 +92,21 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
             }
         });
 
-        gLoginButton = (SignInButton) view.findViewById(R.id.btn_google_login);
-        gLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //pickUserAccount();
-            }
-        });
-
-
-        initViews(view);
         return view;
     }
 
-    private void initViews(View view) {
+    private void saveInfo()
+    {
+        Profile userProfile = Profile.getCurrentProfile();
+        SharedPreferences.Editor prefEdit = preferences.edit();
+        prefEdit.putString("Username", userProfile.getName());
+        Log.i("Info", userProfile.toString());
+        prefEdit.putString("Email", userProfile.toString());
+        prefEdit.commit();
 
-        pref = getActivity().getPreferences(0);
+    }
+
+    private void initViews(View view) {
 
         btn_login = (AppCompatButton) view.findViewById(R.id.btn_login);
         tv_register = (TextView) view.findViewById(R.id.tv_register);
@@ -106,6 +119,18 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         btn_login.setOnClickListener(this);
         tv_register.setOnClickListener(this);
         tv_reset_password.setOnClickListener(this);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        preferences = this.getActivity().getPreferences(Context.MODE_PRIVATE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -162,7 +187,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
                 Snackbar.make(getView(), resp.getMessage(), Snackbar.LENGTH_LONG).show();
 
                 if(resp.getResult().equals(Constants.SUCCESS)){
-                    SharedPreferences.Editor editor = pref.edit();
+                    SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(Constants.IS_LOGGED_IN,true);
                     editor.putString(Constants.EMAIL,resp.getUser().getEmail());
                     editor.putString(Constants.NAME,resp.getUser().getName());
