@@ -24,12 +24,9 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.SignInButton;
 
-import java.util.Arrays;
-
 import app.greentech.Models.ServerRequest;
 import app.greentech.Models.ServerResponse;
 import app.greentech.Models.User;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
