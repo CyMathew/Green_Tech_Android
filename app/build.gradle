@@ -10,6 +10,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -33,4 +34,5 @@ dependencies {
     compile 'com.intellij:annotations:+@jar'
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.android.support:multidex:1.0.0'
 }

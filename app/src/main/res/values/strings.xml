@@ -30,7 +30,7 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
-    <string name="base_url">http://10.0.2.2/</string>
+    <string name="base_url">http://ec2-52-67-6-129.sa-east-1.compute.amazonaws.com/</string>
     <string name="operation_register">register</string>
     <string name="operation_login">login</string>
     <string name="operation_change_pass">chgPass</string>
