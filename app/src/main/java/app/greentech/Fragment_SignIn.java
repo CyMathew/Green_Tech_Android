@@ -14,6 +14,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.common.SignInButton;
+
 import app.greentech.Models.ServerRequest;
 import app.greentech.Models.ServerResponse;
 import app.greentech.Models.User;
@@ -32,11 +39,54 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     private ProgressBar progress;
     private SharedPreferences pref;
 
+    private LoginButton fbLoginButton;
+    private SignInButton gLoginButton;
+    private CallbackManager callbackManager;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_sign_in, container, false);
+
+        callbackManager = CallbackManager.Factory.create();
+
+        fbLoginButton = (LoginButton) view.findViewById(R.id.btn_fb_login);
+        fbLoginButton.setReadPermissions("user_friends");
+
+        // If using in a fragment
+        fbLoginButton.setFragment(this);
+
+        // Other app specific specialization
+
+        // Callback registration
+        fbLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+                getActivity().finish();
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                // App code
+            }
+        });
+
+        gLoginButton = (SignInButton) view.findViewById(R.id.btn_google_login);
+        gLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //pickUserAccount();
+            }
+        });
+
+
         initViews(view);
         return view;
     }

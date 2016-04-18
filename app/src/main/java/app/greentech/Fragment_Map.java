@@ -19,6 +19,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import com.google.maps.android.geojson.GeoJsonLayer;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -28,6 +30,8 @@ import java.util.List;
 public class Fragment_Map extends Fragment {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+    private GeoJsonLayer waterLayer;
+
 
     public static MapView mapView;
 
@@ -92,7 +96,16 @@ public class Fragment_Map extends Fragment {
 
     private void setupMap()
     {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(33.586513, -101.883885))).setTitle("First Marker");
+        try{
+            waterLayer = new GeoJsonLayer(mapView.getMap(), R.raw.water_geojson, getActivity().getApplicationContext());
+        }
+        catch (Exception e)
+        {
+            //TODO: Handle the geoJSON exception
+        }
+
+        waterLayer.addLayerToMap();
+        //mMap.addMarker(new MarkerOptions().position(new LatLng(33.586513, -101.883885))).setTitle("First Marker");
 
         //default camera location
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
