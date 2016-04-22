@@ -17,6 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 
 import com.google.android.gms.maps.model.Marker;
+import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
 
 /**
@@ -40,8 +41,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         View v = inflater.inflate(R.layout.fragment_map,
                 container, false);
 
-        try
-        {
+        try {
             // Changing map type
             gMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
@@ -62,9 +62,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
             MapsInitializer.initialize(this.getActivity());
 
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
         return v;
@@ -146,7 +144,17 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-        Log.i("Info", marker.getId().toString());
+
+        for (GeoJsonFeature feature : waterLayer.getFeatures()) {
+            if (feature.getId().equals(marker.getId())) {
+                Log.i("Info", feature.getId());
+                marker.setTitle(feature.getProperty("name"));
+                marker.setSnippet(feature.getProperty("building"));
+            }
+        }
+
         return false;
     }
+
+
 }

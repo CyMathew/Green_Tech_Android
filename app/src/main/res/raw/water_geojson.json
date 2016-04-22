@@ -1,1 +1,405 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Music"},"geometry":{"type":"Point","coordinates":[-101.87414467334747,33.58089291221673]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Student Union"},"geometry":{"type":"Point","coordinates":[-101.87462747097015,33.58133535470051]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Student Union"},"geometry":{"type":"Point","coordinates":[-101.87462210655212,33.58136216932358]}},{"type":"Feature","properties":{"type":"Refill","name":"Basement Water Refill","building":"Physical Plant"},"geometry":{"type":"Point","coordinates":[-101.88391864299774,33.58585350110892]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Physical Plant"},"geometry":{"type":"Point","coordinates":[-101.88412249088286,33.585250201475944]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Physical Plant"},"geometry":{"type":"Point","coordinates":[-101.88363969326018,33.58550492850218]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Law"},"geometry":{"type":"Point","coordinates":[-101.88715875148773,33.578805804458845]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Law"},"geometry":{"type":"Point","coordinates":[-101.88716411590575,33.578801335223204]}},{"type":"Feature","properties":{"type":"Refill","name":"3rd Floor Water Refill","building":"Law"},"geometry":{"type":"Point","coordinates":[-101.88717484474182,33.578805804458845]}},{"type":"Feature","properties":{"type":"Refill","name":"Basement Water Refill","building":"Civil"},"geometry":{"type":"Point","coordinates":[-101.8738979101181,33.58645456210393]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Food Tech"},"geometry":{"type":"Point","coordinates":[-101.87639772891998,33.58263138528537]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Math"},"geometry":{"type":"Point","coordinates":[-101.87627702951431,33.5849731291199]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Chap"},"geometry":{"type":"Point","coordinates":[-101.87133103609084,33.579270603702824]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Chap"},"geometry":{"type":"Point","coordinates":[-101.87133103609084,33.57927283830854]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Plant Sciences"},"geometry":{"type":"Point","coordinates":[-101.87825381755829,33.58187388011744]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Agricultural Ed"},"geometry":{"type":"Point","coordinates":[-101.87836647033691,33.582693951786595]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Chemistry"},"geometry":{"type":"Point","coordinates":[-101.87608122825623,33.5839363343458]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Elec. Engineering"},"geometry":{"type":"Point","coordinates":[-101.87625288963318,33.58641657696053]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Library"},"geometry":{"type":"Point","coordinates":[-101.87660157680511,33.58141132944428]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Human Sciences"},"geometry":{"type":"Point","coordinates":[-101.87344729900359,33.583051473780564]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Business Admin."},"geometry":{"type":"Point","coordinates":[-101.87899947166443,33.58783318804944]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Business Admin."},"geometry":{"type":"Point","coordinates":[-101.87900483608244,33.5878108442065]}},{"type":"Feature","properties":{"type":"Refill","name":"3rd Floor Water Refill","building":"Business Admin."},"geometry":{"type":"Point","coordinates":[-101.87898874282837,33.58781531297554]}},{"type":"Feature","properties":{"type":"Refill","name":"1st Floor Water Refill","building":"Music"},"geometry":{"type":"Point","coordinates":[-101.87460064888,33.58088844308918]}},{"type":"Feature","properties":{"type":"Refill","name":"2nd Floor Water Refill","building":"Music"},"geometry":{"type":"Point","coordinates":[-101.87459528446196,33.5808616283189]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "m1",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Music"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87414467334747,
+          33.58089291221673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m2",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Student Union"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87462747097015,
+          33.58133535470051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m3",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Student Union"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87462210655212,
+          33.58136216932358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m4",
+      "properties": {
+        "type": "Refill",
+        "name": "Basement Water Refill",
+        "building": "Physical Plant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.88391864299774,
+          33.58585350110892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m5",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Physical Plant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.88412249088286,
+          33.585250201475944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m6",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Physical Plant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.88363969326018,
+          33.58550492850218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m7",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Law"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.88715875148773,
+          33.578805804458845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m8",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Law"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.88716411590575,
+          33.578801335223204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m9",
+      "properties": {
+        "type": "Refill",
+        "name": "3rd Floor Water Refill",
+        "building": "Law"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.88717484474182,
+          33.578805804458845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m10",
+      "properties": {
+        "type": "Refill",
+        "name": "Basement Water Refill",
+        "building": "Civil"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8738979101181,
+          33.58645456210393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m11",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Food Tech"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87639772891998,
+          33.58263138528537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m12",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Math"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87627702951431,
+          33.5849731291199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m13",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Chap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87133103609084,
+          33.579270603702824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m14",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Chap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87133103609084,
+          33.57927283830854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m15",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Plant Sciences"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87825381755829,
+          33.58187388011744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m16",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Agricultural Ed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87836647033691,
+          33.582693951786595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m17",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Chemistry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87608122825623,
+          33.5839363343458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m18",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Elec. Engineering"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87625288963318,
+          33.58641657696053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m19",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87660157680511,
+          33.58141132944428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m20",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Human Sciences"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87344729900359,
+          33.583051473780564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m21",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Business Admin."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87899947166443,
+          33.58783318804944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m22",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Business Admin."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87900483608244,
+          33.5878108442065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m23",
+      "properties": {
+        "type": "Refill",
+        "name": "3rd Floor Water Refill",
+        "building": "Business Admin."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87898874282837,
+          33.58781531297554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m24",
+      "properties": {
+        "type": "Refill",
+        "name": "1st Floor Water Refill",
+        "building": "Music"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87460064888,
+          33.58088844308918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "m25",
+      "properties": {
+        "type": "Refill",
+        "name": "2nd Floor Water Refill",
+        "building": "Music"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.87459528446196,
+          33.5808616283189
+        ]
+      }
+    }
+  ]
+}
