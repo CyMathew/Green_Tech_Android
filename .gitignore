@@ -2,3 +2,10 @@
 *.properties
 *.iml
 *.properties
+*.lock
+
+*.lock
+
+*.bin
+
+*.bin

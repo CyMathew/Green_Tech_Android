@@ -1,2 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_dfaf34e862c4b4c0bfb7f95e253a68c7cc173b0f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.1.1_e2bae72fa68b3a82ad0ff393c25a32dc537b5165/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-8.4.0_c85df0d91d65756dd15e8ca7e959eb7236ae6148/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.2.1_a63a471c461d51de4dc6768aca9802e299da28bc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_92633631b6fb28b8c6773debbf2c4b7a0866fb43/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.0_dc9f93f49864aff5d42822f89e32bed04d9dbeb9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.1_fa4e7c4f4bff05b50776adba350a11ef606842c4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-8.4.0_ec5229bdbcaa6862ce522b8669ddbda6f5178265/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_6d94b97c15207786750e91cf628781a41e529220/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_d5a834c1aa921bf65605457a29673c665e105ca8/classes.dex" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="bbcf6448f6d40abe506e2c83b70a3e8bfd2b4539">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/annotations-12.0_6ab208e9bda0af5e9ac0dc3d8044a83a3ea0a803/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_d8c237487f1ea5b4567152cb9986d543aed27af3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0a7af465456dcfe6886e8a55e492a894e5352c84">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b17cce1b19a7395d190fcc4fffaf4432318c3430/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-8.4.0_3983ec2a0aec8cc5dd2f43cf90cd4d6118c8d87a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4d3de1e946207667e76261421de0218f132960e0">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.maps.android-android-maps-utils-0.4.3_3384324b164616e18da3518d3289aaabb3bdeebe/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.11.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="86da97c30f50a67ddabe2cf7040713ad17153fce">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.11.0_617133a32b047cfbf7335841169841dbbdc22d6d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2286580e3842052cab8c6b73714ac4908ec063cd">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_02b5bdfdabf672ede962cdc0fcb4f766c46fa8f1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_d435daebd85e754c5946470df4691044308d8c6a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0e5a66a941515d873a34065fe44fbba6ef422a1b">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-customtabs-23.2.1_fcb00d3486777ca66ede8e59c53c477cb0957703/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_fc9995886d456d8226979474b695ce187d61d38f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.4.0_d329234dbd569495845cbdb07189a418a177d46e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_d5b8bd809d7c266f1bf533e801ddd0cf10941b97/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_edf33f7ecef0a6f37f1e9f0184fb208244fa2c4f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_1dfbe0539b632a2a482a19cdc2704e4a3e6071d7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/Kyrie/Documents/AndroidStudio/Green_Tech/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.1_a1e1e887b935c55d0bd4e215f4ec346a2bd5cbf0/classes.dex" />
+    </item>
+
+</items>
