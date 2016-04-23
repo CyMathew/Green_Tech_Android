@@ -2,10 +2,12 @@
 *This list contains all current to-dos for Green Tech Project.*
 
 ####Map
+- [ ] Find all recycling places
 - [ ] Add all recycling markers
-- [ ] Add all water refilling stations
-- [ ] Add descriptive info to info boxes on makers
-- [ ] Use getMapAsync() rather than getMap()
+- [ ] ~~Add all water refilling stations~~ *Cyril*
+- [ ] Check water refill locations
+- [ ] ~Add descriptive info to info boxes on markers~ *Cyril*
+- [ ] ~Use getMapAsync() rather than getMap()~ *Cyril*
 - [ ] dynamic camera location based on user location
 - [ ] Filter markers/list based on Water/Recycle options
 - [ ] List of all nearby markers for quick access
@@ -18,7 +20,7 @@
 ####Login
 - [x] ~~Add login screen~~       *Cyril*
 - [x] ~~Buttons for options to Sign In and Register seperated~~ *Cyril*
-- [ ] Ability to register username/pw through database *Aashish*
+- [ ] ~Ability to register username/pw through database~ *Aashish*
 - [ ] Google Login *Aashish*
 - [ ] Facebook Login *Aashish*
 
