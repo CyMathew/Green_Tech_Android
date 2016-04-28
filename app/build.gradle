@@ -22,6 +22,7 @@ android {
 
 repositories {
     mavenCentral()
+    maven {url "https://jitpack.io"}
 }
 
 dependencies {
@@ -37,5 +38,6 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.google.maps.android:android-maps-utils:+'
-    compile'com.google.android.gms:play-services-vision:8.4.0'
+    compile 'com.google.android.gms:play-services-vision:8.4.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
 }
