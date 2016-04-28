@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="app.greentech.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/barcode_scan_option"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Open Barcode Scanner"
         app:showAsAction="never" />
 </menu>

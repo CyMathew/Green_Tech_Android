@@ -2,6 +2,7 @@ package app.greentech;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -11,43 +12,11 @@ import android.view.ViewGroup;
 /**
  * Created by Cyril on 3/3/16.
  */
-public class Fragment_Links extends AppCompatActivity {
+public class Fragment_Links extends Fragment {
 
-    @@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.bar_activity_main);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id., new PlaceholderFragment()).commit();
-        }
-    }
-
+    @Nullable
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle app bar item clicks here. The app bar
-        // automatically handles clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_links, container, false);
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() { }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.bar_activity_main,
-                    container, false);
-            return rootView;
-        }
-    }
+}

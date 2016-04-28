@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="/Users/aashish/Desktop/Green_Tech/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="797a3630aedd56fd9819774f3a360c998d41f74a">
-        <dex dex="/Users/aashish/Desktop/Green_Tech/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_ff3407eb96175988c7fd69f7c7080ef07ef29f97.jar" />
-    </item>
-
-</items>
