@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     SharedPreferences preferences;
 
     FragmentManager fragmentManager;
+    AppCompatActivity compt;
     Fragment fragment;
     Fragment_Map mapFrag;
     Fragment_Stats statFrag;
@@ -156,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             case R.id.nav_stats:
                 toolbar.setTitle("Statistics");
-                fragment = statFrag;
+                compt = statFrag;
                 break;
             case R.id.nav_map:
                 toolbar.setTitle("Map");
