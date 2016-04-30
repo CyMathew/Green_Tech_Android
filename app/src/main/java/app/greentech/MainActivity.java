@@ -1,5 +1,6 @@
 package app.greentech;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
@@ -18,6 +19,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
@@ -42,8 +45,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Fragment_Tips tipsFrag;
     Fragment_Settings settingsFrag;
 
+    View header_view;
+
+    ImageView nav_picture;
     TextView nav_TV_user;
     TextView nav_TV_email;
+    Button loginButton;
+
+    final static int REQUEST_LOGIN = 0x1;
 
 
     @Override
@@ -90,18 +99,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //toolbar.setTitle("Map");
 
-        //initLogin();
-
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        loginButton = (Button) findViewById(R.id.btn_start_login);
+        nav_picture = (ImageView) findViewById(R.id.nav_profilePic);
         nav_TV_user = (TextView) findViewById(R.id.nav_username);
         nav_TV_email = (TextView) findViewById(R.id.nav_email);
+
+        //initializeLogin();
     }
 
-    private void initLogin()
+    private void initializeLogin()
     {
-        if (!(preferences.getBoolean(getString(R.string.is_logged_in), false))) {
+        if ((preferences.getBoolean(getString(R.string.is_logged_in), false))) {
+
+            Log.i("Info", "User found to be logged in");
+            changeProfileState(true);
 
         }
     }
@@ -113,13 +127,58 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //nav_TV_email.setText(preferences.getString("Email", ""));
 
         //Once logged in, hide login button and show user name, user picture and user account
+        switch (requestCode) {
+
+            case REQUEST_LOGIN:
+                switch (resultCode) {
+                    case Activity.RESULT_OK:
+                        Log.i("TAG", "User logged in.");
+                        changeProfileState(true);
+                        break;
+                    case Activity.RESULT_CANCELED:
+                        Log.i("TAG", "User chose not to login");
+                        break;
+                }
+                break;
+        }
+
+    }
+
+    private void changeProfileState(boolean value)
+    {
+        if(value)
+        {
+            Log.i("Info", "Changing Visibility");
+            loginButton = (Button) findViewById(R.id.btn_start_login);
+            nav_picture = (ImageView) findViewById(R.id.nav_profilePic);
+            nav_TV_user = (TextView) findViewById(R.id.nav_username);
+            nav_TV_email = (TextView) findViewById(R.id.nav_email);
+
+
+            loginButton.setVisibility(View.GONE);
+            nav_picture.setVisibility(View.VISIBLE);
+            nav_TV_email.setVisibility(View.VISIBLE);
+            nav_TV_user.setVisibility(View.VISIBLE);
+
+            nav_TV_user.setText(preferences.getString("Username", ""));
+            nav_TV_email.setText(preferences.getString("Email", ""));
+        }
     }
 
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+        else if(fragment != mapFrag)
+        {
+            toolbar.setTitle("Map");
+            fragment = mapFrag;
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_main, fragment)
+                    .commit();
+        }
+        else {
             super.onBackPressed();
         }
     }
@@ -202,6 +261,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onLoginClick(View view) {
 
         Intent intent_Login = new Intent(this, LoginActivity.class);
-        startActivity(intent_Login);
+        startActivityForResult(intent_Login, REQUEST_LOGIN);
     }
 }

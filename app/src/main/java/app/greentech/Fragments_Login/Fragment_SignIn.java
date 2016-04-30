@@ -1,5 +1,6 @@
 package app.greentech.Fragments_Login;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -19,10 +20,17 @@ import android.widget.TextView;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.SignInButton;
+
+import org.json.JSONObject;
+
+import java.io.FileOutputStream;
+import java.util.Arrays;
 
 import app.greentech.Utils.Constants;
 import app.greentech.Models.ServerRequest;
@@ -45,8 +53,13 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     private SharedPreferences preferences;
 
     private LoginButton fbLoginButton;
+    private String fb_email;
     private SignInButton gLoginButton;
     private CallbackManager callbackManager;
+
+    private FileOutputStream fos;
+
+    final static int TYPE_FB = 0x1;
 
 
     @Override
@@ -54,13 +67,34 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_sign_in, container, false);
 
+        preferences = this.getActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE);
+
         callbackManager = CallbackManager.Factory.create();
-
         fbLoginButton = (LoginButton) view.findViewById(R.id.btn_fb_login);
-        fbLoginButton.setReadPermissions("user_friends");
-
-        // If using in a fragment
+        fbLoginButton.setReadPermissions(Arrays.asList("email", "user_friends"));
         fbLoginButton.setFragment(this);
+
+        // Callback registration
+        fbLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.i("Info", "User succeeded in Facebook login");
+                saveInfo(TYPE_FB);
+                getActivity().setResult(Activity.RESULT_OK);
+                getActivity().finish();
+            }
+
+            @Override
+            public void onCancel() {
+                Log.i("Info", "User cancelled Facebook login");
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                Log.e("Error", "Facebook couldn't log in");
+                exception.printStackTrace();
+            }
+        });
 
         // Other app specific specialization
         gLoginButton = (SignInButton) view.findViewById(R.id.btn_google_login);
@@ -72,37 +106,28 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         });
         initViews(view);
 
-        // Callback registration
-        fbLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                // App code
-                saveInfo();
-                getActivity().finish();
-            }
-
-            @Override
-            public void onCancel() {
-                // App code
-            }
-
-            @Override
-            public void onError(FacebookException exception) {
-                // App code
-            }
-        });
-
         return view;
     }
 
-    private void saveInfo()
+    private void saveInfo(int type)
     {
-        Profile userProfile = Profile.getCurrentProfile();
-        SharedPreferences.Editor prefEdit = preferences.edit();
-        prefEdit.putString("Username", userProfile.getName());
-        Log.i("Info", userProfile.toString());
-        prefEdit.putString("Email", userProfile.toString());
-        prefEdit.commit();
+        switch(type)
+        {
+            case TYPE_FB:
+                Profile userProfile = Profile.getCurrentProfile();
+
+                //fos = new FileOutputStream(userProfile.getProfilePictureUri(15, 15).getPath());
+                //image.compress(format, 100, fos);
+
+
+                SharedPreferences.Editor prefEdit = preferences.edit();
+                prefEdit.putString("Username", userProfile.getName());
+                prefEdit.putString("Email", fb_email);
+                prefEdit.putBoolean(getString(R.string.is_logged_in), true);
+                prefEdit.commit();
+                break;
+        }
+
 
     }
 

@@ -50,7 +50,7 @@
     <string name="permission_required_toast">Location permission is required </string>
 
     <!-- Strings related to facebook login -->
-    <string name="facebook_app_id">615392475284870</string>
+    <string name="facebook_app_id">158136504587547</string>
 
     <!-- String related to Google Login-->
     <string name="pick_account">Unable to log in</string>
