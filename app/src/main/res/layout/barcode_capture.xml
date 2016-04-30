@@ -7,16 +7,16 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
-  <app.greentech.camera.CameraSourcePreview
+  <app.greentech.Camera.CameraSourcePreview
       android:id="@+id/preview"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-    <app.greentech.camera.GraphicOverlay
+    <app.greentech.Camera.GraphicOverlay
         android:id="@+id/graphicOverlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-  </app.greentech.camera.CameraSourcePreview>
+  </app.greentech.Camera.CameraSourcePreview>
 
 </LinearLayout>

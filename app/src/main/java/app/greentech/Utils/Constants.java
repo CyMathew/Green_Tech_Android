@@ -1,4 +1,4 @@
-package app.greentech;
+package app.greentech.Utils;
 
 /**
  * Created by Cyril on 4/16/2016.

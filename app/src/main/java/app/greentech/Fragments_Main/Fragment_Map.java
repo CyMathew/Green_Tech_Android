@@ -1,4 +1,4 @@
-package app.greentech;
+package app.greentech.Fragments_Main;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -19,6 +19,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
+
+import app.greentech.R;
 
 /**
  * Created by Cyril on 3/3/16.

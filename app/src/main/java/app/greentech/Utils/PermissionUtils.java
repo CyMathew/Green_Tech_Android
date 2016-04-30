@@ -1,4 +1,4 @@
-package app.greentech;
+package app.greentech.Utils;
 
 /*
  * Copyright (C) 2015 The Android Open Source Project
@@ -26,6 +26,8 @@ package app.greentech;
         import android.support.v4.app.DialogFragment;
         import android.support.v7.app.AppCompatActivity;
         import android.widget.Toast;
+
+        import app.greentech.R;
 
 /**
  * Utility class for access to runtime permissions.

@@ -1,7 +1,9 @@
-package app.greentech;
+package app.greentech.Fragments_Main;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+
+import app.greentech.R;
 
 /**
  * Created by Cyril on 3/2/16.

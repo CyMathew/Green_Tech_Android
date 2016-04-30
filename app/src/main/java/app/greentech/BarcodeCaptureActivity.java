@@ -39,12 +39,12 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Toast;
 
-import app.greentech.camera.CameraSource;
+import app.greentech.Camera.CameraSource;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.CommonStatusCodes;
-import app.greentech.camera.CameraSourcePreview;
-import app.greentech.camera.GraphicOverlay;
+import app.greentech.Camera.CameraSourcePreview;
+import app.greentech.Camera.GraphicOverlay;
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;

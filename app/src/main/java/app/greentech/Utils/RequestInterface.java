@@ -1,4 +1,4 @@
-package app.greentech;
+package app.greentech.Utils;
 
 import app.greentech.Models.ServerRequest;
 import app.greentech.Models.ServerResponse;

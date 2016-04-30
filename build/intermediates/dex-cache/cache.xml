@@ -1,3 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_1bfad7dccbf9b883bf55ed952f9584930a46773b\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.2.1_7349dbecd669549bb9f11e0914110b98ff848b7e\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.3\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4d3de1e946207667e76261421de0218f132960e0">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.maps.android-android-maps-utils-0.4.3_08ce42930b9f1b58eb4671f642e0c540e8e8e2a8\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.2\43eeae0b9fb087bb3194ba59ab63a38a32fbf3e\retrofit-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.0.2_354bcd02b2e4514e6844114b6bd984fd22cf5f27\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e2431728529f5024acbd61b11cc74fce8bdf078f">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b832c8b76d06c9b269bd93136bf803076ce01fa4\classes.dex" />
+    </item>
+    <item
+        jar="D:\Users\Matias\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.2.1_841297b84947475bc795ca88230141880d4bf70a\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.2.1_45cfd24e9403b402c61ed7d29bc8115b259051c7\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.2.4\7abd1ecef320da6a7679b137083151401fe8bf43\MPAndroidChart-v2.2.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7abd1ecef320da6a7679b137083151401fe8bf43">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\MPAndroidChart-v2.2.4_e62204c15bbf71c5b217096e80c3ad9a26a13e57\classes.dex" />
+    </item>
+    <item
+        jar="D:\Program Files\Android\Android Studio\gradle\m2repository\com\intellij\annotations\12.0\annotations-12.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="bbcf6448f6d40abe506e2c83b70a3e8bfd2b4539">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\annotations-12.0_d231d08b915cbd31e6f9f81d8864717cc1f8d638\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_06a7b8a14a20e7882529ae1206c4687481ef5cc7\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.2.0_19d87ce0b5cd5ecfbb16733cb1755ac305355afb\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_e1f89fb8ce6913739201d7ce7e913855875d63fd\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0e5a66a941515d873a34065fe44fbba6ef422a1b">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.2.1_b5ec8c1ebbee474403d20153c829d3e1c1fc4c43\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-8.4.0_8276de5b48f6e8b8ef443dcbc5e2666abf01bb25\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_5e9bb2ccb39580f8ce89a206a5b3d8d4b5acd65e\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_8cc187c1d90a2bfe3fd64b7a5332da7ddbb97107\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.2\f8d87f15b94b8d74e7ccf61d7eedb558811cdb30\converter-gson-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.0.2_84901d905a84989bbe526c828e846c6ad6bc27b6\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_be56e00ff45344a60de6c1a97dfc62e4577e521d\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-8.4.0_f6a779213eb64cb75ef192e879110c10bc64a5df\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_7660c0d3aa66bbd12fac3b269be8f30f4cb21f3f\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-8.4.0_ea4ee89bb887403a2b31b09120428938793d74ea\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.4.0_08ddd00c7d95d9677fa0fed64237f2d2b2551467\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.1_567dce04400b81937562eed5ce3fded006c2767a\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="27c46ca953f3283b99ef649488a387b44e9c275f">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1abf54af3c166fd852beec60b03fc2cd1057f610\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.11.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="86da97c30f50a67ddabe2cf7040713ad17153fce">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.11.0_40e38384ce77a5a6b5edfddc2417d1bc9a7e821f\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.6.1_1e356cd534efb57e3630be431e6bd870fe2fdfe3\classes.dex" />
+    </item>
+    <item
+        jar="D:\Content\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_99643c20499cd37a3e47d97e66d18aa7d6698c11\classes.dex" />
+    </item>
+
+</items>

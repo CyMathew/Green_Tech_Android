@@ -22,6 +22,8 @@ import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
 
+import app.greentech.Fragments_Main.*;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //toolbar.setTitle("Map");
 
-        initLogin();
+        //initLogin();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -100,8 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void initLogin()
     {
         if (!(preferences.getBoolean(getString(R.string.is_logged_in), false))) {
-            Intent intent_Login = new Intent(this, LoginActivity.class);
-            startActivity(intent_Login);
+
         }
     }
 
@@ -110,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onActivityResult(requestCode, resultCode, data);
         //nav_TV_user.setText(preferences.getString("Username", ""));
         //nav_TV_email.setText(preferences.getString("Email", ""));
+
+        //Once logged in, hide login button and show user name, user picture and user account
     }
 
     @Override
@@ -194,5 +197,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onLoginClick(View view) {
+
+        Intent intent_Login = new Intent(this, LoginActivity.class);
+        startActivity(intent_Login);
     }
 }

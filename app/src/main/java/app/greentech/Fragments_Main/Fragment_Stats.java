@@ -1,4 +1,4 @@
-package app.greentech;
+package app.greentech.Fragments_Main;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+
+import app.greentech.R;
 
 /**
  * Created by Cyril on 3/3/16.
