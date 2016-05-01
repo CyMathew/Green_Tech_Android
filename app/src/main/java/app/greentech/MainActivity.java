@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     JSONObject response, profile_pic_data, profile_pic_url;
 
     final static int REQUEST_LOGIN = 0x1;
+    final static int TYPE_FB = 0x1;
+    final static int TYPE_GOOG = 0x2;
 
 
     @Override
@@ -132,10 +134,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     {
         if ((preferences.getBoolean(getString(R.string.is_logged_in), false))) {
 
-            Log.i("Info", "User found to be logged in");
+            Log.i("Info", "User is logged in");
             //changeProfileState(true);
-            setUserProfile(preferences.getString("FB_jsondata", ""));
 
+            switch(preferences.getInt("AccountType", 0))
+            {
+                case TYPE_FB:
+                                setUserProfile(preferences.getString("FB_jsondata", ""), TYPE_FB);
+                                break;
+                case TYPE_GOOG:
+                                setUserProfile(preferences.getString("GUsername", ""), TYPE_GOOG);
+                                break;
+            }
         }
     }
 
@@ -144,20 +154,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
        Set User Profile Information in Navigation Bar.
     */
 
-    public  void  setUserProfile(String jsondata){
+    public  void  setUserProfile(String data, int type){
 
-        try {
-            response = new JSONObject(jsondata);
-            nav_TV_email.setText(response.get("email").toString());
-            nav_TV_user.setText(response.get("name").toString());
-            profile_pic_data = new JSONObject(response.get("picture").toString());
-            profile_pic_url = new JSONObject(profile_pic_data.getString("data"));
+        switch(type)
+        {
+            case TYPE_FB:
+                try
+                {
+                    response = new JSONObject(data);
+                    nav_TV_email.setText(response.get("email").toString());
+                    nav_TV_user.setText(response.get("name").toString());
+                    profile_pic_data = new JSONObject(response.get("picture").toString());
+                    profile_pic_url = new JSONObject(profile_pic_data.getString("data"));
 
-            Picasso.with(this).load(profile_pic_url.getString("url")).into(nav_picture);
+                    Picasso.with(this).load(profile_pic_url.getString("url")).into(nav_picture);
 
-        } catch (Exception e){
-            e.printStackTrace();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+                break;
+            case TYPE_GOOG:
+                nav_TV_email.setText(data.toString());
+                break;
         }
+
+
     }
 
 

@@ -1,11 +1,14 @@
 package app.greentech.Fragments_Login;
 
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.AppCompatButton;
@@ -16,20 +19,20 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.common.AccountPicker;
 import com.google.android.gms.common.SignInButton;
 
 import org.json.JSONObject;
 
-import java.io.FileOutputStream;
 import java.util.Arrays;
 
 import app.greentech.Utils.Constants;
@@ -37,6 +40,7 @@ import app.greentech.Models.ServerRequest;
 import app.greentech.Models.ServerResponse;
 import app.greentech.Models.User;
 import app.greentech.R;
+import app.greentech.Utils.GetGUsernameTask;
 import app.greentech.Utils.RequestInterface;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,13 +57,15 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     private SharedPreferences preferences;
 
     private LoginButton fbLoginButton;
-    private String fb_email;
     private SignInButton gLoginButton;
     private CallbackManager callbackManager;
 
-    private FileOutputStream fos;
-
     final static int TYPE_FB = 0x1;
+    final static int TYPE_GOOG = 0x2;
+    static final int REQUEST_CODE_PICK_ACCOUNT = 1000;
+    String mEmail; // Received from newChooseAccountIntent(); passed to getToken()
+    static final int REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR = 1001;
+    String SCOPE = "oauth2:https://www.googleapis.com/auth/userinfo.profile";
 
 
     @Override
@@ -79,7 +85,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.i("Info", "User succeeded in Facebook login");
-                getUserInfo(loginResult);
+                getFBUserInfo(loginResult);
                 getActivity().setResult(Activity.RESULT_OK);
                 getActivity().finish();
             }
@@ -101,7 +107,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         gLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //pickUserAccount();
+                pickGUserAccount();
             }
         });
 
@@ -151,7 +157,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
 
                 } else {
 
-                    Snackbar.make(getView(), "Fields are empty !", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(getView(), "Fields are empty!", Snackbar.LENGTH_LONG).show();
                 }
                 break;
             case R.id.tv_reset_password:
@@ -164,6 +170,34 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CODE_PICK_ACCOUNT)
+        {
+            // Receiving a result from the AccountPicker
+            if (resultCode == Activity.RESULT_OK)
+            {
+                mEmail = data.getStringExtra(AccountManager.KEY_ACCOUNT_NAME);
+                // With the account name acquired, go get the auth token
+                getGUsername();
+
+                SharedPreferences.Editor prefEdit = preferences.edit();
+                prefEdit.putString("GUsername", mEmail);
+                prefEdit.putInt("AccountType", TYPE_GOOG);
+                prefEdit.putBoolean(getString(R.string.is_logged_in), true);
+                prefEdit.commit();
+
+                getActivity().setResult(Activity.RESULT_OK);
+                getActivity().finish();
+            }
+            else if (resultCode == Activity.RESULT_CANCELED)
+            {
+                // The account picker dialog closed without selecting an account.
+                // Notify users that they must pick an account to proceed.
+                Toast.makeText(getActivity(), R.string.pick_account, Toast.LENGTH_SHORT).show();
+            }
+        }
+        // Handle the result from exceptions
+        //TODO: Exception Handling for Not logging in
     }
 
     private void serverLoginProcess(String email, String password) {
@@ -231,10 +265,10 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     }
 
     /*
-    To get the facebook user's own profile information via  creating a new request.
-    When the request is completed, a callback is called to handle the success condition.
- */
-    protected void getUserInfo(LoginResult loginResult){
+        To get the facebook user's own profile information via  creating a new request.
+        When the request is completed, a callback is called to handle the success condition.
+    */
+    protected void getFBUserInfo(LoginResult loginResult){
 
         GraphRequest data_request = GraphRequest.newMeRequest(loginResult.getAccessToken(),
                 new GraphRequest.GraphJSONObjectCallback() {
@@ -246,6 +280,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
                         //saveInfo(TYPE_FB, );
                         SharedPreferences.Editor prefEdit = preferences.edit();
                         prefEdit.putString("FB_jsondata", json_object.toString());
+                        prefEdit.putInt("AccountType", TYPE_FB);
                         prefEdit.putBoolean(getString(R.string.is_logged_in), true);
                         prefEdit.commit();
 
@@ -257,6 +292,76 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         data_request.executeAsync();
 
     }
+
+    private void pickGUserAccount() {
+        String[] accountTypes = new String[]{"com.google"};
+        Intent intent = AccountPicker.newChooseAccountIntent(null, null,
+                accountTypes, false, null, null, null, null);
+        startActivityForResult(intent, REQUEST_CODE_PICK_ACCOUNT);
+    }
+
+    /**
+     * Attempts to retrieve the username.
+     * If the account is not yet known, invoke the picker. Once the account is known,
+     * start an instance of the AsyncTask to get the auth token and do work with it.
+     */
+    private void getGUsername() {
+        if (mEmail == null)
+        {
+            pickGUserAccount();
+        }
+        else
+        {
+            if (isDeviceOnline())
+            {
+                new GetGUsernameTask(getActivity(), mEmail, SCOPE).execute();
+            }
+            else
+            {
+                Toast.makeText(getActivity(), R.string.not_online, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    private boolean isDeviceOnline()
+    {
+        ConnectivityManager connMgr = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * This method is a hook for background threads and async tasks that need to
+     * provide the user a response UI when an exception occurs.
+     */
+    /*public void handleException(final Exception e)
+    {
+        // Because this call comes from the AsyncTask, we must ensure that the following
+        // code instead executes on the UI thread.
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (e instanceof GooglePlayServicesAvailabilityException) {
+                    // The Google Play services APK is old, disabled, or not present.
+                    // Show a dialog created by Google Play services that allows
+                    // the user to update the APK
+                    int statusCode = ((GooglePlayServicesAvailabilityException)e).getConnectionStatusCode();
+                    Dialog dialog = GooglePlayServicesUtil.getErrorDialog(statusCode, getActivity(), REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR);
+                    dialog.show();
+                } else if (e instanceof UserRecoverableAuthException) {
+                    // Unable to authenticate, such as when the user has not yet granted
+                    // the app access to the account, but the user can fix this.
+                    // Forward the user to an activity in Google Play services.
+                    Intent intent = ((UserRecoverableAuthException)e).getIntent();
+                    startActivityForResult(intent, REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR);
+                }
+            }
+        });
+    }*/
 
 
     /*private void saveInfo(int type)

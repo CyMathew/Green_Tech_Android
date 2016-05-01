@@ -20,7 +20,7 @@ public class GetGUsernameTask extends AsyncTask<Void, Void, Void>
         String mScope;
         String mEmail;
 
-        GetGUsernameTask(Activity activity, String name, String scope)
+        public GetGUsernameTask(Activity activity, String name, String scope)
         {
             this.mActivity = activity;
             this.mScope = scope;
@@ -58,16 +58,20 @@ public class GetGUsernameTask extends AsyncTask<Void, Void, Void>
      */
     protected String fetchToken() throws IOException
     {
-        try {
-        return GoogleAuthUtil.getToken(mActivity, mEmail, mScope);
-        } catch (UserRecoverableAuthException userRecoverableException) {
-        // GooglePlayServices.apk is either old, disabled, or not present
-        // so we need to show the user some UI in the activity to recover.
-        //mActivity.handleException(userRecoverableException);
-        } catch (GoogleAuthException fatalException) {
-        // Some other type of unrecoverable exception has occurred.
-        // Report and log the error as appropriate for your app.
-
+        try
+        {
+            return GoogleAuthUtil.getToken(mActivity, mEmail, mScope);
+        }
+        catch (UserRecoverableAuthException userRecoverableException)
+        {
+            // GooglePlayServices.apk is either old, disabled, or not present
+            // so we need to show the user some UI in the activity to recover.
+            //mActivity.handleException(userRecoverableException);
+        }
+        catch (GoogleAuthException fatalException)
+        {
+            // Some other type of unrecoverable exception has occurred.
+            // Report and log the error as appropriate for your app.
         }
         return null;
     }
