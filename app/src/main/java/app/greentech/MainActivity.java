@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -24,6 +25,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONObject;
 
 import app.greentech.Fragments_Main.*;
 
@@ -51,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView nav_TV_user;
     TextView nav_TV_email;
     Button loginButton;
+
+    JSONObject response, profile_pic_data, profile_pic_url;
 
     final static int REQUEST_LOGIN = 0x1;
 
@@ -90,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .replace(R.id.content_main, fragment)
                 .commit();
 
+        setNavigationHeader();
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -98,16 +105,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         //toolbar.setTitle("Map");
+        initializeLogin();
+    }
+
+    /*
+        Set Navigation header by using Layout Inflater.
+     */
+
+    public void setNavigationHeader()
+    {
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View header = LayoutInflater.from(this).inflate(R.layout.nav_header_main, null);
+        navigationView.addHeaderView(header);
         navigationView.setNavigationItemSelectedListener(this);
+
 
         loginButton = (Button) findViewById(R.id.btn_start_login);
         nav_picture = (ImageView) findViewById(R.id.nav_profilePic);
         nav_TV_user = (TextView) findViewById(R.id.nav_username);
         nav_TV_email = (TextView) findViewById(R.id.nav_email);
-
-        //initializeLogin();
     }
 
     private void initializeLogin()
@@ -115,10 +133,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if ((preferences.getBoolean(getString(R.string.is_logged_in), false))) {
 
             Log.i("Info", "User found to be logged in");
-            changeProfileState(true);
+            //changeProfileState(true);
+            setUserProfile(preferences.getString("FB_jsondata", ""));
 
         }
     }
+
+
+    /*
+       Set User Profile Information in Navigation Bar.
+    */
+
+    public  void  setUserProfile(String jsondata){
+
+        try {
+            response = new JSONObject(jsondata);
+            nav_TV_email.setText(response.get("email").toString());
+            nav_TV_user.setText(response.get("name").toString());
+            profile_pic_data = new JSONObject(response.get("picture").toString());
+            profile_pic_url = new JSONObject(profile_pic_data.getString("data"));
+
+            Picasso.with(this).load(profile_pic_url.getString("url")).into(nav_picture);
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -133,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 switch (resultCode) {
                     case Activity.RESULT_OK:
                         Log.i("TAG", "User logged in.");
-                        changeProfileState(true);
+                        //changeProfileState(true);
                         break;
                     case Activity.RESULT_CANCELED:
                         Log.i("TAG", "User chose not to login");

@@ -79,14 +79,14 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.i("Info", "User succeeded in Facebook login");
-                saveInfo(TYPE_FB);
+                getUserInfo(loginResult);
                 getActivity().setResult(Activity.RESULT_OK);
                 getActivity().finish();
             }
 
             @Override
             public void onCancel() {
-                Log.i("Info", "User cancelled Facebook login");
+                Log.i("Info", "Facebook login cancelled");
             }
 
             @Override
@@ -104,31 +104,10 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
                 //pickUserAccount();
             }
         });
+
         initViews(view);
 
         return view;
-    }
-
-    private void saveInfo(int type)
-    {
-        switch(type)
-        {
-            case TYPE_FB:
-                Profile userProfile = Profile.getCurrentProfile();
-
-                //fos = new FileOutputStream(userProfile.getProfilePictureUri(15, 15).getPath());
-                //image.compress(format, 100, fos);
-
-
-                SharedPreferences.Editor prefEdit = preferences.edit();
-                prefEdit.putString("Username", userProfile.getName());
-                prefEdit.putString("Email", fb_email);
-                prefEdit.putBoolean(getString(R.string.is_logged_in), true);
-                prefEdit.commit();
-                break;
-        }
-
-
     }
 
     private void initViews(View view) {
@@ -153,12 +132,6 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
     public void onClick(View v) {
 
         switch (v.getId()) {
@@ -174,7 +147,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
                 if (!email.isEmpty() && !password.isEmpty()) {
 
                     progress.setVisibility(View.VISIBLE);
-                    loginProcess(email, password);
+                    serverLoginProcess(email, password);
 
                 } else {
 
@@ -187,7 +160,13 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         }
     }
 
-    private void loginProcess(String email, String password) {
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void serverLoginProcess(String email, String password) {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_URL)
@@ -250,4 +229,55 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         ft.replace(R.id.activity_login, register);
         ft.commit();
     }
+
+    /*
+    To get the facebook user's own profile information via  creating a new request.
+    When the request is completed, a callback is called to handle the success condition.
+ */
+    protected void getUserInfo(LoginResult loginResult){
+
+        GraphRequest data_request = GraphRequest.newMeRequest(loginResult.getAccessToken(),
+                new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(
+                            JSONObject json_object,
+                            GraphResponse response) {
+
+                        //saveInfo(TYPE_FB, );
+                        SharedPreferences.Editor prefEdit = preferences.edit();
+                        prefEdit.putString("FB_jsondata", json_object.toString());
+                        prefEdit.putBoolean(getString(R.string.is_logged_in), true);
+                        prefEdit.commit();
+
+                    }
+                });
+        Bundle permission_param = new Bundle();
+        permission_param.putString("fields", "id,name,email,picture.width(120).height(120)");
+        data_request.setParameters(permission_param);
+        data_request.executeAsync();
+
+    }
+
+
+    /*private void saveInfo(int type)
+    {
+        switch(type)
+        {
+            case TYPE_FB:
+                Profile userProfile = Profile.getCurrentProfile();
+
+                //fos = new FileOutputStream(userProfile.getProfilePictureUri(15, 15).getPath());
+                //image.compress(format, 100, fos);
+
+
+                SharedPreferences.Editor prefEdit = preferences.edit();
+                prefEdit.putString("Username", userProfile.getName());
+                prefEdit.putString("Email", fb_email);
+                prefEdit.putBoolean(getString(R.string.is_logged_in), true);
+                prefEdit.commit();
+                break;
+        }
+
+
+    }*/
 }
