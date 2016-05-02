@@ -182,7 +182,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
 
                 SharedPreferences.Editor prefEdit = preferences.edit();
                 prefEdit.putString("GUsername", mEmail);
-                prefEdit.putInt("AccountType", TYPE_GOOG);
+                //prefEdit.putInt("AccountType", TYPE_GOOG);
                 prefEdit.putBoolean(getString(R.string.is_logged_in), true);
                 prefEdit.commit();
 

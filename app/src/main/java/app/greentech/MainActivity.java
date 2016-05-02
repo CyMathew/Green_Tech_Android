@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Fragment_Tips tipsFrag;
     Fragment_Settings settingsFrag;
 
-    View header_view;
+    View nav_headerView;
 
     ImageView nav_picture;
     TextView nav_TV_user;
@@ -82,7 +83,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .setAction("Action", null).show();
             }
         });
-        fab.hide();
+        //fab.hide();
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        nav_headerView = getLayoutInflater().inflate(R.layout.nav_header_main, null);
+        navigationView.addHeaderView(nav_headerView);
+
+        loginButton = (Button) nav_headerView.findViewById(R.id.btn_start_login);
+        nav_picture = (ImageView) nav_headerView.findViewById(R.id.nav_profilePic);
+        nav_TV_user = (TextView) nav_headerView.findViewById(R.id.nav_username);
+        nav_TV_email = (TextView) nav_headerView.findViewById(R.id.nav_email);
+
+        initializeLogin();
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        //initializeLogin();
 
         mapFrag = new Fragment_Map();
         statFrag = new Fragment_Stats();
@@ -98,36 +120,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .replace(R.id.content_main, fragment)
                 .commit();
 
-        setNavigationHeader();
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
 
         //toolbar.setTitle("Map");
-        initializeLogin();
-    }
-
-    /*
-        Set Navigation header by using Layout Inflater.
-     */
-
-    public void setNavigationHeader()
-    {
-
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-
-        View header = LayoutInflater.from(this).inflate(R.layout.nav_header_main, null);
-        navigationView.addHeaderView(header);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
-        loginButton = (Button) findViewById(R.id.btn_start_login);
-        nav_picture = (ImageView) findViewById(R.id.nav_profilePic);
-        nav_TV_user = (TextView) findViewById(R.id.nav_username);
-        nav_TV_email = (TextView) findViewById(R.id.nav_email);
+        //
     }
 
     private void initializeLogin()
@@ -135,8 +131,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if ((preferences.getBoolean(getString(R.string.is_logged_in), false))) {
 
             Log.i("Info", "User is logged in");
-            //changeProfileState(true);
-
             switch(preferences.getInt("AccountType", 0))
             {
                 case TYPE_FB:
@@ -154,7 +148,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
        Set User Profile Information in Navigation Bar.
     */
 
-    public  void  setUserProfile(String data, int type){
+    public void setUserProfile(String data, int type)
+    {
+        changeProfileState(true);
 
         switch(type)
         {
@@ -177,6 +173,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case TYPE_GOOG:
                 nav_TV_email.setText(data.toString());
+                //Log.i("Google Login Info", data.toString());
                 break;
         }
 
@@ -199,6 +196,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case Activity.RESULT_OK:
                         Log.i("TAG", "User logged in.");
                         //changeProfileState(true);
+                        switch(preferences.getInt("AccountType", 0x0))
+                        {
+                            case TYPE_FB:
+                                Log.i("Info", "Logging into Facebook");
+                                setUserProfile(preferences.getString("FB_jsondata", ""), TYPE_FB);
+                                break;
+                            case TYPE_GOOG:
+                                Log.i("Info", "Logging into Google+");
+                                setUserProfile(preferences.getString("GUsername", ""), TYPE_GOOG);
+                                break;
+                        }
                         break;
                     case Activity.RESULT_CANCELED:
                         Log.i("TAG", "User chose not to login");
@@ -214,19 +222,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(value)
         {
             Log.i("Info", "Changing Visibility");
-            loginButton = (Button) findViewById(R.id.btn_start_login);
-            nav_picture = (ImageView) findViewById(R.id.nav_profilePic);
-            nav_TV_user = (TextView) findViewById(R.id.nav_username);
-            nav_TV_email = (TextView) findViewById(R.id.nav_email);
-
 
             loginButton.setVisibility(View.GONE);
             nav_picture.setVisibility(View.VISIBLE);
             nav_TV_email.setVisibility(View.VISIBLE);
             nav_TV_user.setVisibility(View.VISIBLE);
-
-            nav_TV_user.setText(preferences.getString("Username", ""));
-            nav_TV_email.setText(preferences.getString("Email", ""));
+        }
+        else
+        {
+            loginButton.setVisibility(View.VISIBLE);
+            nav_picture.setVisibility(View.INVISIBLE);
+            nav_TV_email.setVisibility(View.VISIBLE);
+            //TODO: CHANGE VISIBILITY
+            nav_TV_user.setVisibility(View.INVISIBLE);
         }
     }
 

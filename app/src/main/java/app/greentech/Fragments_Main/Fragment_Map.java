@@ -35,13 +35,10 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     //TODO: Add all recycling bin markers
     //TODO: Add descriptive info to info boxes on markers
 
-    //TODO: Use newer getMapAsync() rather than dep getMap()
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_map,
-                container, false);
+        View v = inflater.inflate(R.layout.fragment_map, container, false);
 
         try {
             // Changing map type
