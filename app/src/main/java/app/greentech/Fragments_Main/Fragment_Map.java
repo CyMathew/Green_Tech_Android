@@ -17,8 +17,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
+import com.google.maps.android.geojson.GeoJsonPoint;
+
+import java.util.ArrayList;
 
 import app.greentech.R;
 
@@ -31,6 +35,8 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     private GeoJsonLayer waterLayer, binLayer;
     public static MapView mapView;
 
+    private ArrayList<Marker> waterList, binList;
+
 
     //TODO: Add all recycling bin markers
     //TODO: Add descriptive info to info boxes on markers
@@ -39,6 +45,8 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_map, container, false);
+        waterList = new ArrayList<Marker>();
+        binList = new ArrayList<Marker>();
 
         try {
             // Changing map type
@@ -49,7 +57,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
             // Enable / Disable my location button
             gMap.getUiSettings().setMyLocationButtonEnabled(true);
-
 
             // Enable / Disable Compass icon
             gMap.getUiSettings().setCompassEnabled(true);
@@ -100,8 +107,10 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         }
 
-        waterLayer.addLayerToMap();
-        binLayer.addLayerToMap();
+        addMarkers(waterLayer, binLayer);
+
+        //waterLayer.addLayerToMap();
+        //binLayer.addLayerToMap();
         //gMap.addMarker(new MarkerOptions().position(new LatLng(33.586513, -101.883885))).setTitle("First Marker");
 
         // Set a listener for info window events.
@@ -117,6 +126,41 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
 
         //TODO: dynamic camera location/zoom based on user location
+    }
+
+    public void addMarkers(GeoJsonLayer wLayer, GeoJsonLayer bLayer)
+    {
+        for (GeoJsonFeature feature : wLayer.getFeatures())
+        {
+                waterList.add(gMap.addMarker(new MarkerOptions()
+                        .position(((GeoJsonPoint)feature.getGeometry()).getCoordinates())
+                        .title(feature.getProperty("name"))
+                        .snippet(feature.getProperty("building"))));
+        }
+
+        for (GeoJsonFeature feature : bLayer.getFeatures())
+        {
+            binList.add(gMap.addMarker(new MarkerOptions()
+                    .position(((GeoJsonPoint)feature.getGeometry()).getCoordinates())
+                    .title(feature.getProperty("name"))
+                    .snippet(feature.getProperty("building"))));
+        }
+    }
+
+    public void showMarkers(ArrayList<Marker> list)
+    {
+        for(Marker m: list)
+        {
+            m.setVisible(true);
+        }
+    }
+
+    public void hideMarkers(ArrayList<Marker> list)
+    {
+        for(Marker m: list)
+        {
+            m.setVisible(false);
+        }
     }
 
     @Override
@@ -150,14 +194,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-
-        for (GeoJsonFeature feature : waterLayer.getFeatures()) {
-            if (feature.getId().equals(marker.getId())) {
-                Log.i("Info", feature.getId());
-                marker.setTitle(feature.getProperty("name"));
-                marker.setSnippet(feature.getProperty("building"));
-            }
-        }
 
         return false;
     }

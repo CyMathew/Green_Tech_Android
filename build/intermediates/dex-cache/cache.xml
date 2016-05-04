@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="820605a9df6a91d7f68669f1147ee203b5ebc5c6">
-        <dex dex="D:\Content\Documents\GitHub\Green_Tech\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1abf54af3c166fd852beec60b03fc2cd1057f610\classes.dex" />
-    </item>
-
-</items>
+<items version="2" />

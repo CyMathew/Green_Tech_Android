@@ -160,6 +160,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     response = new JSONObject(data);
                     nav_TV_email.setText(response.get("email").toString());
                     nav_TV_user.setText(response.get("name").toString());
+
+                    boolean b = response.getBoolean("installed");
+                    if(b) {Log.i("FRIEND!", response.getString("name"));}
+
                     profile_pic_data = new JSONObject(response.get("picture").toString());
                     profile_pic_url = new JSONObject(profile_pic_data.getString("data"));
 

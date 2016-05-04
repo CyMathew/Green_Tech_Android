@@ -287,7 +287,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
                     }
                 });
         Bundle permission_param = new Bundle();
-        permission_param.putString("fields", "id,name,email,picture.width(120).height(120)");
+        permission_param.putString("fields", "id,name,email,picture.width(120).height(120), installed");
         data_request.setParameters(permission_param);
         data_request.executeAsync();
 
