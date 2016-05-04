@@ -28,7 +28,7 @@ import app.greentech.R;
 public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener, OnInfoWindowClickListener {
 
     private GoogleMap gMap; // Might be null if Google Play services APK is not available.
-    private GeoJsonLayer waterLayer;
+    private GeoJsonLayer waterLayer, binLayer;
     public static MapView mapView;
 
 
@@ -48,7 +48,8 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
             gMap.getUiSettings().setZoomControlsEnabled(false);
 
             // Enable / Disable my location button
-            gMap.getUiSettings().setMyLocationButtonEnabled(false);
+            gMap.getUiSettings().setMyLocationButtonEnabled(true);
+
 
             // Enable / Disable Compass icon
             gMap.getUiSettings().setCompassEnabled(true);
@@ -92,6 +93,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         try {
             waterLayer = new GeoJsonLayer(mapView.getMap(), R.raw.water_geojson, getActivity().getApplicationContext());
+            binLayer = new GeoJsonLayer(mapView.getMap(), R.raw.bin_geojson, getActivity().getApplicationContext());
 
         } catch (Exception e) {
             //TODO: Handle the geoJSON exception
@@ -99,12 +101,17 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         }
 
         waterLayer.addLayerToMap();
+        binLayer.addLayerToMap();
         //gMap.addMarker(new MarkerOptions().position(new LatLng(33.586513, -101.883885))).setTitle("First Marker");
 
         // Set a listener for info window events.
         gMap.setOnInfoWindowClickListener(this);
 
         gMap.setOnMarkerClickListener(this);
+
+        try{
+            gMap.setMyLocationEnabled(true);}
+        catch (SecurityException e) {e.printStackTrace();}
 
         //default camera location
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
