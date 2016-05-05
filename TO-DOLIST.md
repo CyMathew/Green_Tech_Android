@@ -2,14 +2,13 @@
 *This list contains all current to-dos for Green Tech Project.*
 
 ####Map
-- [ ] Find all recycling places *Alex/Aashish/Cyril*
+- [x] ~~Find all recycling places~~ *Alex/Aashish/Cyril*
 - [ ] Check water refill locations *Alex/Aashish/Cyril*
 - [ ] Add all recycling markers 
 - [x] ~~Add all water refilling stations~~ *Cyril*
 - [x] ~~Add descriptive info to info boxes on markers~~ *Cyril*
 - [x] ~~Use getMapAsync() rather than getMap()~~ *Cyril*
-- [ ] dynamic camera location based on user location
-- [ ] Filter markers/list based on Water/Recycle options
+- [x] ~~Filter markers/list based on Water/Recycle options~~ *Cyril*
 - [ ] List of all nearby markers for quick access
 
 ####Tips/Links/FAQs
@@ -41,7 +40,7 @@
 ####Misc
 - [x] ~~Create connection with Database~~ *Aashish*
 - [x] ~~Barcode scanner~~ *Aashish*
-- [ ] Questionnaire for quick guidance
+- [ ] Questionnaire for quick guidance (turn on and off using preferences)
  
 ######Stretch Goals
 - [ ] Rewards System
