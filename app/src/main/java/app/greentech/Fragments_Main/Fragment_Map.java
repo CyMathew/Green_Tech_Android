@@ -1,20 +1,31 @@
 package app.greentech.Fragments_Main;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
+import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -29,11 +40,17 @@ import com.google.maps.android.geojson.GeoJsonPoint;
 import java.util.ArrayList;
 
 import app.greentech.R;
+import io.github.yavski.fabspeeddial.FabSpeedDial;
+import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
 
 /**
  * Created by Cyril on 3/3/16.
  */
-public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener, OnInfoWindowClickListener, OnCheckedChangeListener {
+public class Fragment_Map extends Fragment implements
+        OnMapReadyCallback, OnMarkerClickListener,
+        OnInfoWindowClickListener, OnCheckedChangeListener,
+        OnClickListener, OnMapClickListener,
+        LocationListener{
 
     private GoogleMap gMap; // Might be null if Google Play services APK is not available.
     private GeoJsonLayer waterLayer, binLayer;
@@ -41,8 +58,19 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
     private ArrayList<Marker> waterList, binList;
     private CheckBox binFilter, waterFilter;
-    private FloatingActionButton fab;
+    private FloatingActionButton directionsFab;
+    private FabSpeedDial extrasFab;
+    private LinearLayout filters;
     private boolean binMarkVisible, waterMarkVisible;
+    private LatLng markerPosition;
+    private Location mCurrentLocation;
+    private LocationManager mLocationManager;
+
+    // The minimum distance to change Updates in meters
+    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 2; // 10
+
+    // The minimum time between updates in milliseconds
+    private static final long MIN_TIME_BW_UPDATES = 5000; // 2500 milliseconds
 
 
     //TODO: Add all recycling bin markers
@@ -54,20 +82,75 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         waterList = new ArrayList<Marker>();
         binList = new ArrayList<Marker>();
 
-        binFilter = (CheckBox) v.findViewById(R.id.toggle_bins);
-        waterFilter = (CheckBox) v.findViewById(R.id.toggle_water);
-        fab = (FloatingActionButton) v.findViewById(R.id.fab);
+        mLocationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+
+        try {
+
+            mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME_BW_UPDATES,
+                    MIN_DISTANCE_CHANGE_FOR_UPDATES, new android.location.LocationListener() {
+                        @Override
+                        public void onLocationChanged(Location location) {
+                            Log.d("Location Update", "CHANGED");
+                            mCurrentLocation = location;
+                        }
+
+                        @Override
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                        }
+
+                        @Override
+                        public void onProviderEnabled(String provider) {
+
+                        }
+
+                        @Override
+                        public void onProviderDisabled(String provider) {
+
+                        }
+                    });
+        }
+        catch (SecurityException e)
+        {
+            e.printStackTrace();
+        }
+
+        directionsFab = (FloatingActionButton) v.findViewById(R.id.fab_directions);
+        extrasFab = (FabSpeedDial) v.findViewById(R.id.fab_extras);
+        filters = (LinearLayout) v.findViewById(R.id.layout_checkbox);
+        binFilter = (CheckBox) filters.findViewById(R.id.toggle_bins);
+        waterFilter = (CheckBox) filters.findViewById(R.id.toggle_water);
+
+        extrasFab.setMenuListener(new SimpleMenuListenerAdapter() {
+            @Override
+            public boolean onMenuItemSelected(MenuItem menuItem) {
+
+                if(menuItem.getTitle().equals("Filters"))
+                {
+                    if(filters.getVisibility() == View.VISIBLE) {
+                        filters.setVisibility(View.INVISIBLE);
+                    }
+                    else
+                    {
+                        filters.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                else if(menuItem.getTitle().equals("Quick Find"))
+                {
+                    findNearestLocation();
+                }
+
+
+                return false;
+            }
+        });
 
         binMarkVisible = true;
         waterMarkVisible = true;
 
-        /*fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        directionsFab.setOnClickListener(this);
+        directionsFab.hide();
 
         binFilter.setOnCheckedChangeListener(this);
         waterFilter.setOnCheckedChangeListener(this);
@@ -78,6 +161,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
             // Enable / Disable zooming controls
             gMap.getUiSettings().setZoomControlsEnabled(false);
+            gMap.getUiSettings().setMapToolbarEnabled(false);
 
             // Enable / Disable my location button
             gMap.getUiSettings().setMyLocationButtonEnabled(true);
@@ -135,8 +219,9 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         // Set a listener for info window events.
         gMap.setOnInfoWindowClickListener(this);
-
         gMap.setOnMarkerClickListener(this);
+
+        gMap.setOnMapClickListener(this);
 
         try{
             gMap.setMyLocationEnabled(true);}
@@ -181,6 +266,40 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         }
     }
 
+    private void findNearestLocation()
+    {
+        float shortestDistance = 10000, tmpDistance;
+        int index = 0;
+
+        if(mCurrentLocation != null) {
+
+            for (int i = 0; i < binList.size(); i++) {
+                Location targetLocation = new Location("");
+                targetLocation.setLatitude(binList.get(i).getPosition().latitude);
+                targetLocation.setLongitude(binList.get(i).getPosition().longitude);
+
+                tmpDistance = mCurrentLocation.distanceTo(targetLocation);
+
+                if (tmpDistance < shortestDistance) {
+                    shortestDistance = tmpDistance;
+                    index = i;
+                }
+            }
+
+            gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(binList.get(index).getPosition(), 18));
+            binList.get(index).showInfoWindow();
+        }
+
+        else
+        {
+            Toast.makeText(getActivity(), "Location not yet ready", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
+    }
+
     @Override
     public void onResume() {
         mapView.onResume();
@@ -213,6 +332,11 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     @Override
     public boolean onMarkerClick(Marker marker) {
 
+        gMap.getUiSettings().setMapToolbarEnabled(false);
+        markerPosition = marker.getPosition();
+        extrasFab.hide();
+        directionsFab.show();
+
         return false;
     }
 
@@ -226,11 +350,13 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
             {
                 hideMarkers(binList);
                 binMarkVisible = false;
+
             }
             else
             {
                 showMarkers(binList);
                 binMarkVisible = true;
+
             }
         }
 
@@ -247,6 +373,31 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
                 waterMarkVisible = true;
             }
         }
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        //Log.i("Marker", markerPosition.toString());
+
+        Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?saddr=&daddr=" + markerPosition.latitude + "," + markerPosition.longitude);
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+
+
+
+    }
+
+    @Override
+    public void onMapClick(LatLng latLng) {
+        directionsFab.hide();
+        extrasFab.show();
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
 
     }
 }

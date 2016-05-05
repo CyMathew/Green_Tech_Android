@@ -144,8 +144,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 try
                 {
                     response = new JSONObject(data);
-                    nav_TV_email.setText(response.get("email").toString());
-                    nav_TV_user.setText(response.get("name").toString());
+                    String user_name = response.get("name").toString();
+                    String user_account = response.get("email").toString();
+                    nav_TV_email.setText(user_account);
+                    nav_TV_user.setText(user_name);
+
+                    SharedPreferences.Editor prefEdit = preferences.edit();
+                    prefEdit.putString("Username", user_name);
+                    prefEdit.putString("Account", user_account);
+                    prefEdit.commit();
 
                     boolean b = response.getBoolean("installed");
                     if(b) {Log.i("FRIEND!", response.getString("name"));}

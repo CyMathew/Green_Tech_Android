@@ -2,6 +2,7 @@ package app.greentech.Fragments_Main;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
@@ -13,6 +14,7 @@ import app.greentech.R;
 public class Fragment_Settings extends PreferenceFragment {
 
     SharedPreferences pref;
+    Preference prefItem;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,17 @@ public class Fragment_Settings extends PreferenceFragment {
 
         pref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
 
+        setUpUserInfo();
+    }
 
-
-
+    private void setUpUserInfo()
+    {
+        if(pref.getBoolean(getString(R.string.is_logged_in), false))
+        {
+            prefItem = findPreference("Username");
+            prefItem.setTitle(pref.getString("Username", "").toString());
+            prefItem.setSummary(pref.getString("Account", "").toString());
+        }
     }
 }
 

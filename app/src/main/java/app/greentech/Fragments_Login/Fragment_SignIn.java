@@ -74,7 +74,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_sign_in, container, false);
 
-        preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+        preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         callbackManager = CallbackManager.Factory.create();
         fbLoginButton = (LoginButton) view.findViewById(R.id.btn_fb_login);
