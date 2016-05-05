@@ -9,9 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ImageView nav_picture;
     TextView nav_TV_user;
     TextView nav_TV_email;
-    Button loginButton;
+    Button nav_loginButton;
 
     JSONObject response, profile_pic_data, profile_pic_url;
 
@@ -75,23 +73,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        //fab.hide();
-
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         nav_headerView = getLayoutInflater().inflate(R.layout.nav_header_main, null);
         navigationView.addHeaderView(nav_headerView);
 
-        loginButton = (Button) nav_headerView.findViewById(R.id.btn_start_login);
+        nav_loginButton = (Button) nav_headerView.findViewById(R.id.btn_start_login);
         nav_picture = (ImageView) nav_headerView.findViewById(R.id.nav_profilePic);
         nav_TV_user = (TextView) nav_headerView.findViewById(R.id.nav_username);
         nav_TV_email = (TextView) nav_headerView.findViewById(R.id.nav_email);
@@ -116,10 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         fragment = mapFrag;
         fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content_main, fragment)
-                .commit();
-
+        setFragment(fragment);
 
 
         //toolbar.setTitle("Map");
@@ -185,7 +170,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -227,19 +211,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             Log.i("Info", "Changing Visibility");
 
-            loginButton.setVisibility(View.GONE);
+            nav_loginButton.setVisibility(View.GONE);
             nav_picture.setVisibility(View.VISIBLE);
             nav_TV_email.setVisibility(View.VISIBLE);
             nav_TV_user.setVisibility(View.VISIBLE);
         }
         else
         {
-            loginButton.setVisibility(View.VISIBLE);
+            nav_loginButton.setVisibility(View.VISIBLE);
             nav_picture.setVisibility(View.INVISIBLE);
             nav_TV_email.setVisibility(View.VISIBLE);
             //TODO: CHANGE VISIBILITY
             nav_TV_user.setVisibility(View.INVISIBLE);
         }
+    }
+
+    private void setFragment(Fragment fragment)
+    {
+        // Insert the fragment by replacing any existing fragment
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragment_canvas, fragment)
+                .commit();
     }
 
     @Override
@@ -251,9 +243,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             toolbar.setTitle("Map");
             fragment = mapFrag;
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_main, fragment)
-                    .commit();
+            setFragment(fragment);
         }
         else {
             super.onBackPressed();
@@ -326,10 +316,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
 
-        // Insert the fragment by replacing any existing fragment
-        fragmentManager.beginTransaction()
-                .replace(R.id.content_main, fragment)
-                .commit();
+        setFragment(fragment);
 
         drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -2,10 +2,14 @@ package app.greentech.Fragments_Main;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,17 +33,19 @@ import app.greentech.R;
 /**
  * Created by Cyril on 3/3/16.
  */
-public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener, OnInfoWindowClickListener {
+public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener, OnInfoWindowClickListener, OnCheckedChangeListener {
 
     private GoogleMap gMap; // Might be null if Google Play services APK is not available.
     private GeoJsonLayer waterLayer, binLayer;
     public static MapView mapView;
 
     private ArrayList<Marker> waterList, binList;
+    private CheckBox binFilter, waterFilter;
+    private FloatingActionButton fab;
+    private boolean binMarkVisible, waterMarkVisible;
 
 
     //TODO: Add all recycling bin markers
-    //TODO: Add descriptive info to info boxes on markers
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,6 +53,24 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         View v = inflater.inflate(R.layout.fragment_map, container, false);
         waterList = new ArrayList<Marker>();
         binList = new ArrayList<Marker>();
+
+        binFilter = (CheckBox) v.findViewById(R.id.toggle_bins);
+        waterFilter = (CheckBox) v.findViewById(R.id.toggle_water);
+        fab = (FloatingActionButton) v.findViewById(R.id.fab);
+
+        binMarkVisible = true;
+        waterMarkVisible = true;
+
+        /*fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });*/
+
+        binFilter.setOnCheckedChangeListener(this);
+        waterFilter.setOnCheckedChangeListener(this);
 
         try {
             // Changing map type
@@ -109,10 +133,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         addMarkers(waterLayer, binLayer);
 
-        //waterLayer.addLayerToMap();
-        //binLayer.addLayerToMap();
-        //gMap.addMarker(new MarkerOptions().position(new LatLng(33.586513, -101.883885))).setTitle("First Marker");
-
         // Set a listener for info window events.
         gMap.setOnInfoWindowClickListener(this);
 
@@ -124,8 +144,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         //default camera location
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
-
-        //TODO: dynamic camera location/zoom based on user location
     }
 
     public void addMarkers(GeoJsonLayer wLayer, GeoJsonLayer bLayer)
@@ -199,4 +217,36 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     }
 
 
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+    {
+        if(buttonView == binFilter)
+        {
+            if(binMarkVisible)
+            {
+                hideMarkers(binList);
+                binMarkVisible = false;
+            }
+            else
+            {
+                showMarkers(binList);
+                binMarkVisible = true;
+            }
+        }
+
+        else if(buttonView == waterFilter)
+        {
+            if(waterMarkVisible)
+            {
+                hideMarkers(waterList);
+                waterMarkVisible = false;
+            }
+            else
+            {
+                showMarkers(waterList);
+                waterMarkVisible = true;
+            }
+        }
+
+    }
 }
