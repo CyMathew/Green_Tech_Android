@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.AppCompatButton;
 import android.util.Log;
@@ -73,7 +74,7 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_sign_in, container, false);
 
-        preferences = this.getActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
 
         callbackManager = CallbackManager.Factory.create();
         fbLoginButton = (LoginButton) view.findViewById(R.id.btn_fb_login);
