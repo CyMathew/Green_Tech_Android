@@ -18,10 +18,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -60,7 +63,14 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
     private LoginButton fbLoginButton;
     private SignInButton gLoginButton;
     private CallbackManager callbackManager;
+    private AccessTokenTracker fb_token;
 
+    private LinearLayout layoutServerLogin;
+
+    private
+
+
+    final static int TYPE_NONE = 0x0;
     final static int TYPE_FB = 0x1;
     final static int TYPE_GOOG = 0x2;
     static final int REQUEST_CODE_PICK_ACCOUNT = 1000;
@@ -81,12 +91,22 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         fbLoginButton.setReadPermissions(Arrays.asList("email", "user_friends"));
         fbLoginButton.setFragment(this);
 
+        // Other app specific specialization
+        gLoginButton = (SignInButton) view.findViewById(R.id.btn_google_login);
+        gLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pickGUserAccount();
+            }
+        });
+
         // Callback registration
         fbLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.i("Info", "User succeeded in Facebook login");
                 getFBUserInfo(loginResult);
+                changeVisibility(TYPE_FB);
                 getActivity().setResult(Activity.RESULT_OK);
                 getActivity().finish();
             }
@@ -103,16 +123,21 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
             }
         });
 
-        // Other app specific specialization
-        gLoginButton = (SignInButton) view.findViewById(R.id.btn_google_login);
-        gLoginButton.setOnClickListener(new View.OnClickListener() {
+         fb_token = new AccessTokenTracker() {
             @Override
-            public void onClick(View v) {
-                pickGUserAccount();
+            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+                SharedPreferences.Editor prefEdit = preferences.edit();
+                prefEdit.putInt("AccountType", TYPE_NONE);
+                prefEdit.putBoolean(getString(R.string.is_logged_in), false);
+                prefEdit.commit();
+                changeVisibility(TYPE_NONE);
+                getActivity().finish();
+
             }
-        });
+        };
 
         initViews(view);
+        checkUserLogin();
 
         return view;
     }
@@ -132,10 +157,45 @@ public class Fragment_SignIn extends Fragment implements View.OnClickListener {
         tv_reset_password.setOnClickListener(this);
     }
 
+    private void checkUserLogin()
+    {
+        if(preferences.getBoolean(getString(R.string.is_logged_in), false))
+        {
+            switch(preferences.getInt("AccountType", TYPE_NONE))
+            {
+                case TYPE_FB:
+                    changeVisibility(TYPE_FB);
+                    break;
+            }
+        }
+    }
+
+    private void changeVisibility(int type)
+    {
+        switch(type)
+        {
+            case TYPE_NONE:
+                layoutServerLogin.setVisibility(View.VISIBLE);
+                gLoginButton.setVisibility(View.VISIBLE);
+                fbLoginButton.setVisibility(View.VISIBLE);
+                break;
+            case TYPE_FB:
+                layoutServerLogin.setVisibility(View.GONE);
+                gLoginButton.setVisibility(View.GONE);
+                break;
+
+        }
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        preferences = this.getActivity().getPreferences(Context.MODE_PRIVATE);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        fb_token.stopTracking();
     }
 
     @Override

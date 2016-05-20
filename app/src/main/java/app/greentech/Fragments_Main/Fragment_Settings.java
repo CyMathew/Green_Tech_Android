@@ -26,6 +26,7 @@ public class Fragment_Settings extends PreferenceFragment {
         pref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
 
         setUpUserInfo();
+
     }
 
     private void setUpUserInfo()

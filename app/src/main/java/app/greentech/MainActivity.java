@@ -146,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     response = new JSONObject(data);
                     String user_name = response.get("name").toString();
                     String user_account = response.get("email").toString();
+
                     nav_TV_email.setText(user_account);
                     nav_TV_user.setText(user_name);
 
@@ -155,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     prefEdit.commit();
 
                     boolean b = response.getBoolean("installed");
-                    if(b) {Log.i("FRIEND!", response.getString("name"));}
+                    if(b) {Log.e("FRIEND!", response.getString("name"));}
 
                     profile_pic_data = new JSONObject(response.get("picture").toString());
                     profile_pic_url = new JSONObject(profile_pic_data.getString("data"));
@@ -181,8 +182,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        //nav_TV_user.setText(preferences.getString("Username", ""));
-        //nav_TV_email.setText(preferences.getString("Email", ""));
 
         //Once logged in, hide login button and show user name, user picture and user account
         switch (requestCode) {
@@ -192,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case Activity.RESULT_OK:
                         Log.i("TAG", "User logged in.");
                         //changeProfileState(true);
-                        switch(preferences.getInt("AccountType", 0x0))
+                        switch(preferences.getInt("AccountType", 0))
                         {
                             case TYPE_FB:
                                 Log.i("Info", "Logging into Facebook");
