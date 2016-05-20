@@ -3,13 +3,11 @@ package app.greentech;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -24,12 +22,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.facebook.FacebookSdk;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
-
-import app.greentech.Fragments_Main.*;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -43,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Fragment fragment;
     Fragment_Map mapFrag;
     Fragment_Stats statFrag;
-    Fragment_Social socialFrag;
     Fragment_Links linksFrag;
     Fragment_Faq faqFrag;
     Fragment_Tips tipsFrag;
@@ -68,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FacebookSdk.sdkInitialize(getApplicationContext());
         preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -97,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mapFrag = new Fragment_Map();
         statFrag = new Fragment_Stats();
-        socialFrag = new Fragment_Social();
         linksFrag = new Fragment_Links();
         faqFrag = new Fragment_Faq();
         tipsFrag = new Fragment_Tips();
@@ -273,9 +265,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.barcode_scan_option) {
-            Intent intent = new Intent(this, BarcodeActivity.class);
-            startActivity(intent);
-            return true;
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -297,10 +287,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_map:
                 toolbar.setTitle("Map");
                 fragment = mapFrag;
-                break;
-            case R.id.nav_social:
-                toolbar.setTitle("Social");
-                fragment = socialFrag;
                 break;
             case R.id.nav_links:
                 toolbar.setTitle("Links");
@@ -329,9 +315,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public void onLoginClick(View view) {
-
-        Intent intent_Login = new Intent(this, LoginActivity.class);
-        startActivityForResult(intent_Login, REQUEST_LOGIN);
-    }
 }
