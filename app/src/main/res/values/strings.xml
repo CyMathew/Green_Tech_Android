@@ -5,6 +5,12 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="recycle_paper">Paper</string>
+    <string name="recycle_plastic">Plastic</string>
+    <string name="recycle_alumin">Aluminum</string>
+    <string name="recycle_glass">Glass</string>
+
+
     <string-array name="TipsEntries">
         <item>Tip 1</item>
         <item>Tip 2</item>

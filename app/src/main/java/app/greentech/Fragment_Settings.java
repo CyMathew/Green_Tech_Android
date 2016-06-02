@@ -31,12 +31,7 @@ public class Fragment_Settings extends PreferenceFragment {
 
     private void setUpUserInfo()
     {
-        if(pref.getBoolean(getString(R.string.is_logged_in), false))
-        {
-            prefItem = findPreference("Username");
-            prefItem.setTitle(pref.getString("Username", "").toString());
-            prefItem.setSummary(pref.getString("Account", "").toString());
-        }
+
     }
 }
 

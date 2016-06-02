@@ -3,6 +3,7 @@ package app.greentech;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -36,21 +37,20 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
 import com.google.maps.android.geojson.GeoJsonPoint;
+import com.google.maps.android.ui.BubbleIconFactory;
+import com.google.maps.android.ui.IconGenerator;
 
 import java.util.ArrayList;
 
-import app.greentech.R;
 import io.github.yavski.fabspeeddial.FabSpeedDial;
 import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
 
 /**
  * Created by Cyril on 3/3/16.
  */
-public class Fragment_Map extends Fragment implements
-        OnMapReadyCallback, OnMarkerClickListener,
-        OnInfoWindowClickListener, OnCheckedChangeListener,
-        OnClickListener, OnMapClickListener,
-        LocationListener{
+public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener,
+                                                        OnInfoWindowClickListener, OnCheckedChangeListener,
+                                                        OnClickListener, OnMapClickListener, LocationListener{
 
     private GoogleMap gMap; // Might be null if Google Play services APK is not available.
     private GeoJsonLayer waterLayer, binLayer;
@@ -71,6 +71,8 @@ public class Fragment_Map extends Fragment implements
 
     // The minimum time between updates in milliseconds
     private static final long MIN_TIME_BW_UPDATES = 5000; // 2500 milliseconds
+
+    private static final int REQUEST_RECYCLE = 0x1;
 
 
     //TODO: Add all recycling bin markers
@@ -139,6 +141,12 @@ public class Fragment_Map extends Fragment implements
                 else if(menuItem.getTitle().equals("Quick Find"))
                 {
                     findNearestLocation();
+                }
+
+                else if(menuItem.getTitle().equals("Recycle"))
+                {
+                    Intent intent = new Intent(getActivity(), RecycleActivity.class);
+                    getActivity().startActivityForResult(intent, REQUEST_RECYCLE);
                 }
 
 
@@ -211,7 +219,7 @@ public class Fragment_Map extends Fragment implements
             binLayer = new GeoJsonLayer(mapView.getMap(), R.raw.bin_geojson, getActivity().getApplicationContext());
 
         } catch (Exception e) {
-            //TODO: Handle the geoJSON exception
+            e.printStackTrace();
 
         }
 
@@ -295,9 +303,6 @@ public class Fragment_Map extends Fragment implements
             Toast.makeText(getActivity(), "Location not yet ready", Toast.LENGTH_SHORT).show();
         }
 
-
-
-
     }
 
     @Override
@@ -379,14 +384,10 @@ public class Fragment_Map extends Fragment implements
     @Override
     public void onClick(View v) {
 
-        //Log.i("Marker", markerPosition.toString());
-
         Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?saddr=&daddr=" + markerPosition.latitude + "," + markerPosition.longitude);
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
-
-
 
     }
 
@@ -400,4 +401,6 @@ public class Fragment_Map extends Fragment implements
     public void onLocationChanged(Location location) {
 
     }
+
+
 }

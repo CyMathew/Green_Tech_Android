@@ -2,11 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
     android:orientation="vertical">
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly Total"/>
+
+   <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart_line"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="225dp" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Total"/>
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/chart_bar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
 
 </LinearLayout>

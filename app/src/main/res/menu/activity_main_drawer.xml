@@ -28,10 +28,10 @@
             android:id="@+id/nav_tips"
             android:icon="@drawable/ic_tips"
             android:title="Tips" />
-        <item
+        <!--<item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings"
-            android:title="Settings" />
+            android:title="Settings" />-->
 
 
     </group>
