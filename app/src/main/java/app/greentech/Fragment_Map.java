@@ -3,7 +3,6 @@ package app.greentech;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -20,7 +19,6 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -31,39 +29,85 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
-
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
 import com.google.maps.android.geojson.GeoJsonPoint;
-import com.google.maps.android.ui.BubbleIconFactory;
-import com.google.maps.android.ui.IconGenerator;
-
 import java.util.ArrayList;
-
 import io.github.yavski.fabspeeddial.FabSpeedDial;
 import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
 
 /**
- * Created by Cyril on 3/3/16.
+ * Map fragment that houses Google Map zoomed into the Texas Tech University campus area
+ * Has markers to indicate recycling bin locations loaded through geoJSONs added in the App's resources folder
+ *
+ * Uses Google Maps, Google Play Utils, FAB SpeedDial
+ * @author Cyril Mathew
  */
 public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener,
                                                         OnInfoWindowClickListener, OnCheckedChangeListener,
                                                         OnClickListener, OnMapClickListener, LocationListener{
 
-    private GoogleMap gMap; // Might be null if Google Play services APK is not available.
+    /**
+     * GoogleMap reference
+     */
+    // Might be null if Google Play services APK is not available.
+    private GoogleMap gMap;
+
+    /**
+     *geoJSONLayers for easy addition of geoJSON markers
+     */
     private GeoJsonLayer waterLayer, binLayer;
+
+    /**
+     * Mapview which holds the Google Maps within the fragment
+     */
     public static MapView mapView;
 
+    /**
+     * ArrayLists to hold marker locations after processing from geoJSON
+     */
     private ArrayList<Marker> waterList, binList;
+
+    /**
+     * Checkbox to turn off and on groups of markers
+     */
     private CheckBox binFilter, waterFilter;
-    private FloatingActionButton directionsFab;
-    private FabSpeedDial extrasFab;
+
+    /**
+     * LinearLayout that holds all the filters
+     */
     private LinearLayout filters;
+
+    /**
+     * Booleans to store whether a filter is visible or not
+     */
     private boolean binMarkVisible, waterMarkVisible;
+
+    /**
+     * Floating Action Button for when a marker is selected
+     */
+    private FloatingActionButton directionsFab;
+
+    /**
+     * Floating Action Button Speedial that normally shows when nothing has been selected
+     */
+    private FabSpeedDial extrasFab;
+
+    /**
+     * Latitude and Longitude for markers
+     */
     private LatLng markerPosition;
+
+    /**
+     * Current Location of user
+     */
     private Location mCurrentLocation;
+
+    /**
+     * Used to get location data
+     */
     private LocationManager mLocationManager;
 
     // The minimum distance to change Updates in meters
@@ -74,8 +118,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
     private static final int REQUEST_RECYCLE = 0x1;
 
-
-    //TODO: Add all recycling bin markers
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -97,24 +139,18 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
                         }
 
                         @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
+                        public void onStatusChanged(String provider, int status, Bundle extras) {}
 
                         @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
+                        public void onProviderEnabled(String provider) {}
 
                         @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
+                        public void onProviderDisabled(String provider) {}
                     });
         }
         catch (SecurityException e)
         {
-            e.printStackTrace();
+            e.printStackTrace();    //TODO: FIX THIS EXCEPTION
         }
 
         directionsFab = (FloatingActionButton) v.findViewById(R.id.fab_directions);
@@ -219,7 +255,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
             binLayer = new GeoJsonLayer(mapView.getMap(), R.raw.bin_geojson, getActivity().getApplicationContext());
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); //TODO: FIX THIS TO ACTUALLY CATCH THE EXCEPTION
 
         }
 
@@ -233,12 +269,17 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         try{
             gMap.setMyLocationEnabled(true);}
-        catch (SecurityException e) {e.printStackTrace();}
+        catch (SecurityException e) {e.printStackTrace();} //TODO: FIX THIS TO ACTUALLY CATCH THE EXCEPTION
 
         //default camera location
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
     }
 
+    /**
+     * Adds markers to the map for each geoJSON layer
+     * @param wLayer
+     * @param bLayer
+     */
     public void addMarkers(GeoJsonLayer wLayer, GeoJsonLayer bLayer)
     {
         for (GeoJsonFeature feature : wLayer.getFeatures())
@@ -258,6 +299,10 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         }
     }
 
+    /**
+     * Reveals all markers of a specified list of markers
+     * @param list
+     */
     public void showMarkers(ArrayList<Marker> list)
     {
         for(Marker m: list)
@@ -266,6 +311,10 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         }
     }
 
+    /**
+     * Hides all markers of a specified list of markers
+     * @param list
+     */
     public void hideMarkers(ArrayList<Marker> list)
     {
         for(Marker m: list)
@@ -274,14 +323,20 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         }
     }
 
+    /**
+     * Finds the nearest recycling marker to the user's current location for quick access
+     */
     private void findNearestLocation()
     {
+        //Set parameters
         float shortestDistance = 10000, tmpDistance;
         int index = 0;
 
-        if(mCurrentLocation != null) {
+        if(mCurrentLocation != null)        //If current location data is available
+        {
 
-            for (int i = 0; i < binList.size(); i++) {
+            for (int i = 0; i < binList.size(); i++)            //Take all recycling bin locations and calculate the min distance to one
+            {
                 Location targetLocation = new Location("");
                 targetLocation.setLatitude(binList.get(i).getPosition().latitude);
                 targetLocation.setLongitude(binList.get(i).getPosition().longitude);
@@ -294,12 +349,16 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
                 }
             }
 
+            //Animate the map camera to the marker to point out to the user
             gMap.animateCamera(CameraUpdateFactory.newLatLngZoom(binList.get(index).getPosition(), 18));
+
+            //Show the info window of marker for more info
             binList.get(index).showInfoWindow();
         }
 
-        else
+        else                                    //If current location data is unavailable
         {
+            //Let the user know that the current location data is not yet ready
             Toast.makeText(getActivity(), "Location not yet ready", Toast.LENGTH_SHORT).show();
         }
 
@@ -330,10 +389,13 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     }
 
     @Override
-    public void onInfoWindowClick(Marker marker) {
-        Log.i("Info", "You clicked info window!");
-    }
+    public void onInfoWindowClick(Marker marker) { }
 
+    /**
+     * When a marker is clicked, show the info window
+     * @param marker
+     * @return the event is never consumed so false is returned
+     */
     @Override
     public boolean onMarkerClick(Marker marker) {
 
@@ -345,19 +407,24 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         return false;
     }
 
+    /**
+     * Determine if viability for marker groups have changed
+     * @param buttonView
+     * @param isChecked
+     */
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
     {
-        if(buttonView == binFilter)
+        if(buttonView == binFilter)             //If user selects the binFilter
         {
-            if(binMarkVisible)
+            if(binMarkVisible)                  //If it is already visible
             {
-                hideMarkers(binList);
+                hideMarkers(binList);               //hide them
                 binMarkVisible = false;
 
             }
-            else
+            else                                //Else if it isn't visible
             {
                 showMarkers(binList);
                 binMarkVisible = true;
@@ -365,14 +432,14 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
             }
         }
 
-        else if(buttonView == waterFilter)
+        else if(buttonView == waterFilter)      //If user selects the waterFilter
         {
-            if(waterMarkVisible)
+            if(waterMarkVisible)                //If waterFilters are visible
             {
-                hideMarkers(waterList);
+                hideMarkers(waterList);             //hide them
                 waterMarkVisible = false;
             }
-            else
+            else                                //Else, show them
             {
                 showMarkers(waterList);
                 waterMarkVisible = true;
@@ -381,16 +448,27 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
     }
 
+    /**
+     * When the Directions Floating Action Button is clicked after selecting a marker, the App will
+     * open Google Maps and input the marker position for directions to the marker from current location
+     * @param v
+     */
     @Override
-    public void onClick(View v) {
-
+    public void onClick(View v)
+    {
+        //Set the URI using selected markerPosition
         Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?saddr=&daddr=" + markerPosition.latitude + "," + markerPosition.longitude);
+
+        //Open Google Maps using URI as the intent
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
-
     }
 
+    /**
+     * When the user clicks away from a marker, the Floating Action Button changes to the FAB Speed Dial
+     * @param latLng
+     */
     @Override
     public void onMapClick(LatLng latLng) {
         directionsFab.hide();
@@ -398,9 +476,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     }
 
     @Override
-    public void onLocationChanged(Location location) {
-
-    }
+    public void onLocationChanged(Location location) {}
 
 
 }

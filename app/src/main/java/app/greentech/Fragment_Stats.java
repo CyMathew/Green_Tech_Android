@@ -4,12 +4,10 @@ import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -34,25 +32,66 @@ import java.util.Calendar;
 
 
 /**
- * Created by Cyril on 3/3/16.
+ * Fragment loaded into MainActivity that shows charts of all recycling done during the week.
+ * Uses MPAndroidChart
+ * @author Cyril Mathew on 3/3/16.
  */
 
 public class Fragment_Stats extends Fragment implements OnChartValueSelectedListener{
 
+    /**
+     * DataSource reference for MainActivity's copy of the database reference
+     */
     private StatsDataSource dataSource = MainActivity.dataSource;
 
+    /**
+     * LineChart declaration
+     */
     private LineChart lineChart;
+
+    /**
+     * HorizontalBarChart declaration
+     */
     private HorizontalBarChart barChart;
 
+    /**
+     * SimpleDateFormat declaration used to show dates within charts
+     */
     private SimpleDateFormat dateFormat, dayMonthFormat;
+
+    /**
+     * Calendar object declaration for use with SimpleDateFormat objects.
+     */
     private Calendar cal;
+
+    /**
+     * Strings used to store date values
+     */
     private String dayMonth, date;
 
+    /**
+     * ArrayList used to store values for LineChart
+     */
     private ArrayList<Entry> lineEntries;
+
+    /**
+     * ArrayList used to store values for BarChart
+     */
     private ArrayList<BarEntry> barEntries;
+
+    /**
+     * ArrayLists used to store the labels for LineChart and BarChart
+     */
     private ArrayList<String> lineLabels, barLabels;
 
+    /**
+     * Used to manipulate bar chart values as a group
+     */
     private BarDataSet barDataset;
+
+    /**
+     * Used to manipulate bar chart datasets as a group
+     */
     private BarData barData;
 
     @Nullable
@@ -63,27 +102,36 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         lineChart = (LineChart) view.findViewById(R.id.chart_line);
         barChart = (HorizontalBarChart) view.findViewById(R.id.chart_bar);
 
+        //Open connection to database
         dataSource.open();
 
         dateFormat = new SimpleDateFormat ("yyyy-MM-dd");
         dayMonthFormat = new SimpleDateFormat("MM-dd");
 
+        //Initialize LineChart for viewing
         setupLineChart();
-        setupBarChart();
 
+        //Setup listener for when user selects a specific date within the LineChart
         lineChart.setOnChartValueSelectedListener(this);
 
-        return view;
+        //Initialize BarChart for viewing
+        setupBarChart();
 
+        return view;
     }
 
+    /**
+     * Initial set up of the main line chart
+     */
     private void setupLineChart()
     {
+        //Declaration of object that stores a single entry
         Entry e;
+
         lineEntries = new ArrayList<>();
         lineLabels = new ArrayList<String>();
-
         cal = Calendar.getInstance();
+
 
         LineDataSet dataset = new LineDataSet(lineEntries, "");
         LineData data = new LineData(lineLabels, dataset);
@@ -100,6 +148,7 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         });
 
 
+        //Set up line chart's visuals
         chartLegend.setEnabled(false);
         xAxis.setDrawGridLines(false);
         xAxis.setDrawAxisLine(false);
@@ -107,7 +156,6 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         xAxis.setTextColor(Color.GRAY);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setYOffset(15f);
-
         yAxis.setAxisMinValue(0f);
         yAxis.setDrawAxisLine(false);
         yAxis.setDrawGridLines(false);
@@ -119,52 +167,62 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         dataset.setColor(getResources().getColor(R.color.colorAccent));
         dataset.setFillColor(getResources().getColor(R.color.colorAccent));
         dataset.setDrawCircles(false);
-
-        cal.add(Calendar.DATE, -7);
-
-        for(int i = 0; i < 7; i++)
-        {
-            cal.add(Calendar.DATE, 1);
-            date = dateFormat.format(cal.getTime());
-            dayMonth = dayMonthFormat.format(cal.getTime());
-            //Log.i("VALUE", "Date is: " + dayMonth);
-
-            lineLabels.add(dayMonth);
-            e = new Entry((float)dataSource.getTotal(date), i);
-            Log.i("TOTAL", String.valueOf(dataSource.getTotal(date)));
-            e.setData(date);
-            lineEntries.add(e);
-        }
-        lineChart.setData(data);
-
         dataset.setDrawCubic(true);
         dataset.setDrawFilled(true);
         dataset.setDrawValues(false);
         lineChart.setAutoScaleMinMaxEnabled(true);
         lineChart.setScaleEnabled(false);
 
+        //Get the date of the day 7 days ago
+        cal.add(Calendar.DATE, -7);
+
+        //Calculate the dates of the entire week
+        //Add it to the line labels
+        for(int i = 0; i < 7; i++)
+        {
+            cal.add(Calendar.DATE, 1);
+            date = dateFormat.format(cal.getTime());
+            dayMonth = dayMonthFormat.format(cal.getTime());
+
+            lineLabels.add(dayMonth);
+            e = new Entry((float)dataSource.getTotal(date), i);
+            e.setData(date);
+            lineEntries.add(e);
+        }
+
+        //Add dates to the line chart and animate
+        lineChart.setData(data);
         lineChart.notifyDataSetChanged();
         lineChart.animateY(2500);
+
     }
 
+    /**
+     * Setup of the initial bar chart at the bottom showing itemized recycling during specified day
+     */
     private void setupBarChart()
     {
+        //Declare bar entries and labels
         barEntries = new ArrayList<>();
         barLabels = new ArrayList<String>();
 
+        //Declare bar data, datasets and set initial data
         barDataset = new BarDataSet(barEntries, "");
         barData = new BarData(barLabels, barDataset);
         barChart.setData(barData);
 
+        //Add bar labels
         barLabels.add("Glass");
         barLabels.add("Aluminum");
         barLabels.add("Plastic");
         barLabels.add("Paper");
 
+        //Get/Set today's date
         cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, 1);
+        cal.add(Calendar.DATE, -1);
         date = dateFormat.format(cal.getTime());
 
+        //Setup barchart
         Legend chartLegend = barChart.getLegend();
         XAxis xAxis = barChart.getXAxis();
         YAxis yAxis = barChart.getAxisLeft();
@@ -196,15 +254,15 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         });
 
         barDataset.setBarSpacePercent(55f);
-
-
         barChart.setAutoScaleMinMaxEnabled(true);
-        cal.add(Calendar.DATE, -1);
-        date = dateFormat.format(cal.getTime());
-        Log.i("DATE", date);
+
         updateChartForDate(date);
     }
 
+    /**
+     * Update bar chart for the date picked by the user
+     * @param date
+     */
     private void updateChartForDate(String date)
     {
         barEntries.clear();
@@ -212,7 +270,6 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         barChart.animateY(2500);
 
         barEntries.add(new BarEntry(dataSource.getAmount("Paper", date), 3));
-        Log.i("VALUE", "Paper: "+ dataSource.getAmount("Paper", date));
         barEntries.add(new BarEntry(dataSource.getAmount("Plastic", date), 2));
         barEntries.add(new BarEntry(dataSource.getAmount("Aluminum", date), 1));
         barEntries.add(new BarEntry(dataSource.getAmount("Glass", date), 0));
@@ -222,14 +279,17 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
 
     }
 
+    /**
+     * Accepts input from user when a value is selected on the line chart
+     * @param e
+     * @param dataSetIndex
+     * @param h
+     */
     @Override
     public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
-        //Log.i("VALUE", String.valueOf(e.getVal()) + " " + e.getData().toString());
         updateChartForDate(e.getData().toString());
     }
 
     @Override
-    public void onNothingSelected() {
-
-    }
+    public void onNothingSelected() {}
 }
