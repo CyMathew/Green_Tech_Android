@@ -10,21 +10,29 @@
     <string name="recycle_alumin">Aluminum</string>
     <string name="recycle_glass">Glass</string>
 
-
     <string-array name="TipsEntries">
-        <item>Tip 1</item>
-        <item>Tip 2</item>
+        <item>What to recycle?</item>
+        <item>Where to recycle?</item>
     </string-array>
 
-    <string-array name="LinksEntries">
-        <item>Link 1</item>
-        <item>Link 2</item>
+
+    <!-- Strings related to Links -->
+
+    <string-array name="LinkTitles">
+        <item>TTU Recycling</item>
+        <item>TTU Sustainability Efforts</item>
+        <item>TTU Give Before You Go</item>
+        <item>EPA Recycling</item>
     </string-array>
 
-    <string-array name="FAQEntries">
-        <item>Question 1</item>
-        <item>Question 2</item>
+    <string-array name="LinkSubtitles">
+        <item>http://www.depts.ttu.edu/housing/gogreen/recycle.php</item>
+        <item>http://www.depts.ttu.edu/housing/gogreen/index.php</item>
+        <item>http://www.depts.ttu.edu/housing/gogreen/givebeforeyougo.php</item>
+        <item>https://www.epa.gov/recycle</item>
     </string-array>
+
+    <!---->
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
