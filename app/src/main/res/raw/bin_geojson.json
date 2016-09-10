@@ -7,6 +7,586 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -101.8755835,
+          33.5875028,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Computer Science ",
+        "ackPaper": false,
+        "ackPlastic": false,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8755246,
+          33.5874571,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Computer Science ",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8755016,
+          33.5874752,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Livermore ",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8761181,
+          33.5874511,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Old Petroleum",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8760735,
+          33.5872399,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Old Petroleum",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8757415,
+          33.5866317,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8754128,
+          33.5865318,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8754863,
+          33.5867576,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.875472,
+          33.5865576,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8757805,
+          33.5865214,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8757974,
+          33.5864595,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8759439,
+          33.5863754,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8756601,
+          33.5863842,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "ECE",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8742915,
+          33.5881022,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Industrial Engineering",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746724,
+          33.5882247,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Industrial Engineering",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8748261,
+          33.5883952,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Mechanical Engineering",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "20",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8752271,
+          33.5883133,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Mechanical Engineering",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8754053,
+          33.588296,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Mechanical Engineering",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "22",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8747816,
+          33.5884426,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Mechanical Engineering",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "23",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8745107,
+          33.5889517,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Mechanical Engineering",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "24",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8737124,
+          33.5877703,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Petroleum Engineering",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "25",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8737124,
+          33.5877703,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Petroleum Engineering",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "26",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8739797,
+          33.5867962,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Civil Engineering",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "27",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8739797,
+          33.5867962,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Civil Engineering",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "28",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.885073,
+          33.5899016,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Business",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8792366,
+          33.5878384,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Business",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8794148,
+          33.5879074,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Business",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.879593,
+          33.5877177,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Business",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8791475,
+          33.5878471,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Business",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -101.8761833,
           33.5850106,
           0
@@ -159,26 +739,6 @@
     },
     {
       "type": "Feature",
-      "id": "9",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.87729,
-          33.5844726,
-          0
-        ]
-      },
-      "properties": {
-        "name": "2nd Floor Recycling Bin",
-        "building": "Science",
-        "ackPlastic": true,
-        "ackAlumin": false,
-        "ackPaper": true,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
       "id": "10",
       "geometry": {
         "type": "Point",
@@ -271,26 +831,6 @@
       "properties": {
         "name": "1st Floor Recycling Bin",
         "building": "Science",
-        "ackPlastic": false,
-        "ackAlumin": false,
-        "ackPaper": true,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "15",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8778809,
-          33.5842526,
-          0
-        ]
-      },
-      "properties": {
-        "name": "1st Floor Recycling Bin",
-        "building": "Biology",
         "ackPlastic": false,
         "ackAlumin": false,
         "ackPaper": true,
@@ -793,26 +1333,6 @@
         "building": "Chemistry",
         "ackPlastic": true,
         "ackAlumin": true,
-        "ackPaper": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "41",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.876205,
-          33.5841237,
-          0
-        ]
-      },
-      "properties": {
-        "name": "1st Floor Recycling Bin",
-        "building": "Chemistry",
-        "ackPlastic": true,
-        "ackAlumin": false,
         "ackPaper": false,
         "ackGlass": false
       }
@@ -1559,46 +2079,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8795066,
-          33.5809618,
-          0
-        ]
-      },
-      "properties": {
-        "name": "Sub Basement Recycling Bin",
-        "building": "Art",
-        "ackPlastic": true,
-        "ackAlumin": true,
-        "ackPaper": true,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "67",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8803949,
-          33.5807433,
-          0
-        ]
-      },
-      "properties": {
-        "name": "1st Floor Recycling Bin",
-        "building": "Art",
-        "ackPlastic": true,
-        "ackAlumin": false,
-        "ackPaper": true,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "67",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -101.8806623,
           33.5806312,
           0
@@ -1646,7 +2126,7 @@
       },
       "properties": {
         "name": "3rd Floor Recycling Bin",
-        "building": "Art",
+        "building": "Architecture",
         "ackPlastic": true,
         "ackAlumin": false,
         "ackPaper": true,
@@ -1659,14 +2139,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8818651,
+          -101.8807451,
           33.5805577,
           0
         ]
       },
       "properties": {
         "name": "4th Floor Recycling Bin",
-        "building": "Art",
+        "building": "Architecture",
         "ackPlastic": true,
         "ackAlumin": false,
         "ackPaper": true,
@@ -1679,14 +2159,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8818651,
-          33.5805577,
+          -101.8807025,
+          33.5805812,
           0
         ]
       },
       "properties": {
         "name": "5th Floor Recycling Bin",
-        "building": "Art",
+        "building": "Architecture",
         "ackPlastic": true,
         "ackAlumin": false,
         "ackPaper": true,
@@ -1699,8 +2179,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8816641,
-          33.5804049,
+          -101.880705,
+          33.5805839,
           0
         ]
       },
@@ -1719,8 +2199,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8817844,
-          33.580409,
+          -101.8807043,
+          33.5805824,
           0
         ]
       },
@@ -1739,8 +2219,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8817737,
-          33.5804395,
+          -101.8807032,
+          33.5805859,
           0
         ]
       },
@@ -1759,8 +2239,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8819543,
-          33.5806352,
+          -101.8807013,
+          33.5805827,
           0
         ]
       },
@@ -1779,7 +2259,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -101.8807514,
+          -101.8807414,
           33.5805363,
           0
         ]
@@ -1975,66 +2455,6 @@
     },
     {
       "type": "Feature",
-      "id": "10",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8794148,
-          33.5817004,
-          0
-        ]
-      },
-      "properties": {
-        "name": "3rd Floor Recycling Bin",
-        "building": "English",
-        "ackPaper": true,
-        "ackPlastic": false,
-        "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "11",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8792796,
-          33.5816851,
-          0
-        ]
-      },
-      "properties": {
-        "name": "3rd Floor Recycling Bin",
-        "building": "Philosophy",
-        "ackPaper": true,
-        "ackPlastic": true,
-        "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "12",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8793988,
-          33.5817252,
-          0
-        ]
-      },
-      "properties": {
-        "name": "3rd Floor Recycling Bin",
-        "building": "English",
-        "ackPaper": true,
-        "ackPlastic": true,
-        "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
       "id": "13",
       "geometry": {
         "type": "Point",
@@ -2075,46 +2495,6 @@
     },
     {
       "type": "Feature",
-      "id": "15",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8794148,
-          33.5813556,
-          0
-        ]
-      },
-      "properties": {
-        "name": "4th Floor Recycling Bin",
-        "building": "English",
-        "ackPaper": true,
-        "ackPlastic": false,
-        "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "16",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8793257,
-          33.5817089,
-          0
-        ]
-      },
-      "properties": {
-        "name": "4th Floor Recycling Bin",
-        "building": "Philosophy",
-        "ackPaper": true,
-        "ackPlastic": false,
-        "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
       "id": "17",
       "geometry": {
         "type": "Point",
@@ -2130,26 +2510,6 @@
         "ackPaper": true,
         "ackPlastic": false,
         "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "18",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8793257,
-          33.5817089,
-          0
-        ]
-      },
-      "properties": {
-        "name": "1st Floor Recycling Bin",
-        "building": "Philosophy",
-        "ackPaper": true,
-        "ackPlastic": true,
-        "ackAlumin": true,
         "ackGlass": false
       }
     },
@@ -2248,26 +2608,6 @@
         "name": "2nd Floor Recycling Bin",
         "building": "Education",
         "ackPaper": false,
-        "ackPlastic": true,
-        "ackAlumin": false,
-        "ackGlass": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "16",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.8792424,
-          33.5803619,
-          0
-        ]
-      },
-      "properties": {
-        "name": "2nd Floor Recycling Bin",
-        "building": "Education",
-        "ackPaper": true,
         "ackPlastic": true,
         "ackAlumin": false,
         "ackGlass": false
@@ -2570,6 +2910,1286 @@
         "ackPaper": true,
         "ackPlastic": true,
         "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8752271,
+          33.5817614,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8753162,
+          33.5817527,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8753162,
+          33.5817527,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746925,
+          33.581727,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5809598,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Music",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5809598,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Music",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746925,
+          33.5807787,
+          0
+        ]
+      },
+      "properties": {
+        "name": "SubBasement Recycling Bin",
+        "building": "Music",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746925,
+          33.5807787,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5813046,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Music",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8748707,
+          33.5809339,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Music",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746594,
+          33.5808663,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Music",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8752271,
+          33.5816752,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8752271,
+          33.5816752,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Basement Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8745143,
+          33.5817442,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8745143,
+          33.5815719,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "SUB",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.873169,
+          33.5828895,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.873169,
+          33.5828895,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8730441,
+          33.5830506,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8730887,
+          33.583348,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8728214,
+          33.5834601,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8727323,
+          33.5834687,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8729105,
+          33.5836239,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.873356,
+          33.583322,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8727323,
+          33.5834687,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Human Sciences",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8731777,
+          33.5813565,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "McClellan Hall",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8731777,
+          33.5813565,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721086,
+          33.5815463,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721086,
+          33.5817187,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8720477,
+          33.5815471,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721977,
+          33.5819687,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721532,
+          33.5814127,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721086,
+          33.5815463,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721086,
+          33.5815463,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8723759,
+          33.5816066,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall ",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.872465,
+          33.5813393,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall ",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.872465,
+          33.5813393,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall ",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721086,
+          33.5815463,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall ",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8721086,
+          33.5817187,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Drane Hall ",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8730887,
+          33.5804168,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Knapp Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8730887,
+          33.5804168,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Knapp Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "18",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8729996,
+          33.5804254,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Knapp Hall",
+        "ackPaper": true,
+        "ackPlastic": false,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.872465,
+          33.5805634,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Horn Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "20",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8725541,
+          33.5805548,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Horn Hall",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8741579,
+          33.5796234,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Commons",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "22",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.874247,
+          33.5796149,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Commons",
+        "ackPaper": false,
+        "ackPlastic": true,
+        "ackAlumin": false,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "24",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5793217,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "25",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5793217,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "26",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746925,
+          33.5792269,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "27",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746925,
+          33.5792269,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "28",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5788044,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5788044,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "30",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5788044,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "31",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8747816,
+          33.5787009,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "32",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5793217,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5793217,
+          0
+        ]
+      },
+      "properties": {
+        "name": "3rd Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "34",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5793217,
+          0
+        ]
+      },
+      "properties": {
+        "name": "4th Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "35",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746479,
+          33.5792743,
+          0
+        ]
+      },
+      "properties": {
+        "name": "4th Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "36",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746479,
+          33.578757,
+          0
+        ]
+      },
+      "properties": {
+        "name": "4th Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "37",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8746034,
+          33.5787182,
+          0
+        ]
+      },
+      "properties": {
+        "name": "4th Floor Recycling Bin",
+        "building": "Talkington Hall ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "38",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8767418,
+          33.5789421,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Wall/Gates",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "40",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8770982,
+          33.57908,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Wall/Gates ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "41",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8770982,
+          33.57908,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Wall/Gates ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "41",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8771426,
+          33.5790324,
+          0
+        ]
+      },
+      "properties": {
+        "name": "1st Floor Recycling Bin",
+        "building": "Wall/Gates ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
+        "ackGlass": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "41",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.8772764,
+          33.5790627,
+          0
+        ]
+      },
+      "properties": {
+        "name": "2nd Floor Recycling Bin",
+        "building": "Wall/Gates ",
+        "ackPaper": true,
+        "ackPlastic": true,
+        "ackAlumin": true,
         "ackGlass": false
       }
     }

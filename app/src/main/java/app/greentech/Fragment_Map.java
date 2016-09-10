@@ -46,8 +46,9 @@ import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
  * @author Cyril Mathew
  */
 public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMarkerClickListener,
-                                                        OnInfoWindowClickListener, OnCheckedChangeListener,
-                                                        OnClickListener, OnMapClickListener, LocationListener{
+                                                        OnInfoWindowClickListener, OnClickListener,
+                                                        OnMapClickListener, LocationListener
+{
 
     /**
      * GoogleMap reference
@@ -56,9 +57,9 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     private GoogleMap gMap;
 
     /**
-     *geoJSONLayers for easy addition of geoJSON markers
+     *geoJSONLayer for easy addition of geoJSON markers
      */
-    private GeoJsonLayer waterLayer, binLayer;
+    private GeoJsonLayer binLayer;
 
     /**
      * Mapview which holds the Google Maps within the fragment
@@ -68,22 +69,13 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     /**
      * ArrayLists to hold marker locations after processing from geoJSON
      */
-    private ArrayList<Marker> waterList, binList;
+    private ArrayList<Marker> binList;
 
-    /**
-     * Checkbox to turn off and on groups of markers
-     */
-    private CheckBox binFilter, waterFilter;
 
     /**
      * LinearLayout that holds all the filters
      */
     private LinearLayout filters;
-
-    /**
-     * Booleans to store whether a filter is visible or not
-     */
-    private boolean binMarkVisible, waterMarkVisible;
 
     /**
      * Floating Action Button for when a marker is selected
@@ -123,7 +115,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_map, container, false);
-        waterList = new ArrayList<Marker>();
         binList = new ArrayList<Marker>();
 
         mLocationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
@@ -156,8 +147,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         directionsFab = (FloatingActionButton) v.findViewById(R.id.fab_directions);
         extrasFab = (FabSpeedDial) v.findViewById(R.id.fab_extras);
         filters = (LinearLayout) v.findViewById(R.id.layout_checkbox);
-        binFilter = (CheckBox) filters.findViewById(R.id.toggle_bins);
-        waterFilter = (CheckBox) filters.findViewById(R.id.toggle_water);
 
         extrasFab.setMenuListener(new SimpleMenuListenerAdapter() {
             @Override
@@ -190,14 +179,10 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
             }
         });
 
-        binMarkVisible = true;
-        waterMarkVisible = true;
 
         directionsFab.setOnClickListener(this);
         directionsFab.hide();
 
-        binFilter.setOnCheckedChangeListener(this);
-        waterFilter.setOnCheckedChangeListener(this);
 
         try {
             // Changing map type
@@ -251,7 +236,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         gMap = map;
 
         try {
-            waterLayer = new GeoJsonLayer(mapView.getMap(), R.raw.water_geojson, getActivity().getApplicationContext());
             binLayer = new GeoJsonLayer(mapView.getMap(), R.raw.bin_geojson, getActivity().getApplicationContext());
 
         } catch (Exception e) {
@@ -259,7 +243,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         }
 
-        addMarkers(waterLayer, binLayer);
+        addMarkers(binLayer);
 
         // Set a listener for info window events.
         gMap.setOnInfoWindowClickListener(this);
@@ -275,21 +259,13 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
     }
 
+
     /**
      * Adds markers to the map for each geoJSON layer
-     * @param wLayer
      * @param bLayer
      */
-    public void addMarkers(GeoJsonLayer wLayer, GeoJsonLayer bLayer)
+    public void addMarkers(GeoJsonLayer bLayer)
     {
-        for (GeoJsonFeature feature : wLayer.getFeatures())
-        {
-                waterList.add(gMap.addMarker(new MarkerOptions()
-                        .position(((GeoJsonPoint)feature.getGeometry()).getCoordinates())
-                        .title(feature.getProperty("name"))
-                        .snippet(feature.getProperty("building"))));
-        }
-
         for (GeoJsonFeature feature : bLayer.getFeatures())
         {
             binList.add(gMap.addMarker(new MarkerOptions()
@@ -299,29 +275,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         }
     }
 
-    /**
-     * Reveals all markers of a specified list of markers
-     * @param list
-     */
-    public void showMarkers(ArrayList<Marker> list)
-    {
-        for(Marker m: list)
-        {
-            m.setVisible(true);
-        }
-    }
-
-    /**
-     * Hides all markers of a specified list of markers
-     * @param list
-     */
-    public void hideMarkers(ArrayList<Marker> list)
-    {
-        for(Marker m: list)
-        {
-            m.setVisible(false);
-        }
-    }
 
     /**
      * Finds the nearest recycling marker to the user's current location for quick access
@@ -405,47 +358,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         directionsFab.show();
 
         return false;
-    }
-
-    /**
-     * Determine if viability for marker groups have changed
-     * @param buttonView
-     * @param isChecked
-     */
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-    {
-        if(buttonView == binFilter)             //If user selects the binFilter
-        {
-            if(binMarkVisible)                  //If it is already visible
-            {
-                hideMarkers(binList);               //hide them
-                binMarkVisible = false;
-
-            }
-            else                                //Else if it isn't visible
-            {
-                showMarkers(binList);
-                binMarkVisible = true;
-
-            }
-        }
-
-        else if(buttonView == waterFilter)      //If user selects the waterFilter
-        {
-            if(waterMarkVisible)                //If waterFilters are visible
-            {
-                hideMarkers(waterList);             //hide them
-                waterMarkVisible = false;
-            }
-            else                                //Else, show them
-            {
-                showMarkers(waterList);
-                waterMarkVisible = true;
-            }
-        }
-
     }
 
     /**

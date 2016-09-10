@@ -3,16 +3,12 @@
     <item
         android:id="@+id/action_recycle"
         android:icon="@drawable/ic_recycle"
-        android:title="Recycle"/>
+        android:title="Add Recycling Event"/>
 
-    <item
-        android:id="@+id/action_call"
-        android:icon="@drawable/ic_layers"
-        android:title="Filters" />
-   <!-- <item
+     <!--<item
         android:id="@+id/action_text"
         android:icon="@drawable/ic_view_list"
-        android:title="List of Locations"/> -->
+        android:title="List of Locations"/>-->
     <item
         android:id="@+id/action_email"
         android:icon="@drawable/ic_fast_forward"

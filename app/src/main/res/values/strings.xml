@@ -10,12 +10,6 @@
     <string name="recycle_alumin">Aluminum</string>
     <string name="recycle_glass">Glass</string>
 
-    <string-array name="TipsEntries">
-        <item>What to recycle?</item>
-        <item>Where to recycle?</item>
-    </string-array>
-
-
     <!-- Strings related to Links -->
 
     <string-array name="LinkTitles">
@@ -32,58 +26,10 @@
         <item>https://www.epa.gov/recycle</item>
     </string-array>
 
-    <!---->
-
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
-    <string name="base_url">http://ec2-52-67-6-129.sa-east-1.compute.amazonaws.com/</string>
-    <string name="operation_register">register</string>
-    <string name="operation_login">login</string>
-    <string name="operation_change_pass">chgPass</string>
-    <string name="initiate_reset_pass">resPassReq</string>
-    <string name="finish_reset_pass">resPass</string>
-    <string name="success">success</string>
-    <string name="failure">failure</string>
-    <string name="is_logged_in">isLoggedIn</string>
-    <string name="name">name</string>
-    <string name="email">email</string>
-    <string name="unique_id">unique_id</string>
-    <string name="tag"></string>
-
     <!--    Permissions    -->
     <string name="permission_rationale_location">Access to the location service is required to assist with directions</string>
     <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings.</string>
     <string name="permission_required_toast">Location permission is required </string>
 
-    <!-- Strings related to facebook login -->
-    <string name="facebook_app_id">158136504587547</string>
-
-    <!-- String related to Google Login-->
-    <string name="pick_account">Unable to log in</string>
-    <string name="not_online">The device is not online</string>
-
-
-    <!-- Barcode-->
-    <string name="ok">OK</string>
-    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
-    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
-    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
-    <string name="title_activity_main">Barcode Reader Sample</string>
-    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
-    <string name="read_barcode">Read Barcode</string>
-    <string name="auto_focus">Auto Focus</string>
-    <string name="use_flash">Use Flash</string>
-    <string name="barcode_success">Barcode read successfully</string>
-    <string name="barcode_failure">No barcode captured</string>
-    <string name="barcode_error">"Error reading barcode: %1$s"</string>
-    <string name="title_activity_barcode">BarcodeActivity</string>
 
 </resources>

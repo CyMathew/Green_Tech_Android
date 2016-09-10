@@ -1,10 +1,16 @@
 package app.greentech;
 
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -94,9 +100,15 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
      */
     private BarData barData;
 
+    SharedPreferences preferences;
+
+    private static final String demoPref_active = "demoStats";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        setHasOptionsMenu(true);
 
         View view = inflater.inflate(R.layout.fragment_stats, container, false);
         lineChart = (LineChart) view.findViewById(R.id.chart_line);
@@ -117,7 +129,52 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         //Initialize BarChart for viewing
         setupBarChart();
 
+        //Get Shared Preferences to see if Stats Demo data should be off or on
+        preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        //If Stats Demo data is on
+        if(preferences.getBoolean("init", false))
+        {
+            //add random values to the 7 days of the week
+            SharedPreferences.Editor prefEdit = preferences.edit();
+            prefEdit.putBoolean("init", true);
+            prefEdit.putBoolean(demoPref_active, true);
+            prefEdit.commit();
+            //dataSource.demoSetup(true);
+        }
+
+        //else do nothing
+
         return view;
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.stats_menu, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.stats_menu_option:
+
+                Boolean val = !(preferences.getBoolean(demoPref_active, false));
+
+                SharedPreferences.Editor prefEdit = preferences.edit();
+                prefEdit.putBoolean(demoPref_active, val);
+                prefEdit.commit();
+                dataSource.demoStats();
+
+                return true;
+
+            default:
+                break;
+        }
+
+        return false;
     }
 
     /**

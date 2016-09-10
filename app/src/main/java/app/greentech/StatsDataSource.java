@@ -6,7 +6,13 @@ import android.database.Cursor;
 import android.database.CursorIndexOutOfBoundsException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.text.format.DateFormat;
 import android.util.Log;
+
+import java.net.URL;
+import java.text.SimpleDateFormat;
 
 /**
  * Performs most common database operations
@@ -23,6 +29,9 @@ public class StatsDataSource
      * Database variable
      */
     private SQLiteDatabase database;
+
+    private final short[][] demoStatsData = {{1,0,1,3,5}, {0,1,0,1,2}, {2,1,1,0,4}, {0,1,2,0,3},
+            {2,1,2,2,7}, {0,0,1,1,2}, {1,1,1,1,4}};
 
     /**
      * Constructor for the class
@@ -110,7 +119,7 @@ public class StatsDataSource
      * Database command to add the specified type of recycling done to the records
      * @param type
      */
-    public void addToStats(String type)
+    public void addToStats(String type, String date, int amount)
     {
         open();                             //Open the database connection
         ContentValues values;
@@ -119,23 +128,54 @@ public class StatsDataSource
         if(todayTuple.getCount() > 0)       //If there is already an existing record for today
         {
             values = new ContentValues();
-            values.put(getType(type), getTypeValue(type, getCurrentDate()) +1);
-            values.put(DBHelper.ATTR_SUM, getTypeValue("Total", getCurrentDate()) + 1);
-            database.update(DBHelper.TABLE_STATS, values, DBHelper.ATTR_DATE + "= '" + getCurrentDate()+ "'", null);
+            values.put(getType(type), getTypeValue(type, date) +amount);
+            values.put(DBHelper.ATTR_SUM, getTypeValue("Total", date) + amount);
+            database.update(DBHelper.TABLE_STATS, values, DBHelper.ATTR_DATE + "= '" + date+ "'", null);
 
         }
         else                                //Else create a new record for today
         {
             values = new ContentValues();
-            values.put(DBHelper.ATTR_DATE, getCurrentDate());
-            values.put(getType(type), 1);
-            values.put(DBHelper.ATTR_SUM, 1);
+            values.put(DBHelper.ATTR_DATE, date);
+            values.put(getType(type), amount);
+            values.put(DBHelper.ATTR_SUM, amount);
             database.insert(DBHelper.TABLE_STATS, null, values);
 
         }
 
     }
 
+    public void removeFromStats(String type, String date, int amount)
+    {
+        open();                             //Open the database connection
+        ContentValues values;
+        Cursor todayTuple = getToday();     //Store reference to today's values
+
+        if(todayTuple.getCount() > 0)       //If there is already an existing record for today
+        {
+            values = new ContentValues();
+            values.put(getType(type), getTypeValue(type, date) +amount);
+            values.put(DBHelper.ATTR_SUM, getTypeValue("Total", date) + amount);
+            database.update(DBHelper.TABLE_STATS, values, DBHelper.ATTR_DATE + "= '" + date+ "'", null);
+
+        }
+        else                                //Else create a new record for today
+        {
+            values = new ContentValues();
+            values.put(DBHelper.ATTR_DATE, date);
+            values.put(getType(type), amount);
+            values.put(DBHelper.ATTR_SUM, amount);
+            database.insert(DBHelper.TABLE_STATS, null, values);
+
+        }
+
+    }
+
+    public void demoStats()
+    {
+        Handler handle = new Handler();
+        handle.post(new DemoSetup());
+    }
 
     /**
      * Simple SQL command to get local date from database. Useful way to get date without resorting to using another class
@@ -195,4 +235,35 @@ public class StatsDataSource
     {
         return getTypeValue(type, date);
     }
+
+    private class DemoSetup implements Runnable
+    {
+
+        @Override
+        public void run()
+        {
+            int i;
+            String date = getCurrentDate();
+            String[] parseDate = date.split("-");
+            short startDay = Short.valueOf(parseDate[2]);
+            Log.i("DEMOSTATS", "DATE IS" + startDay);
+            for(i = 7; i < 1; i--)
+            {
+               // Log.i("DEMOSTATS", "DATE IS" + startDay--);
+
+            }
+            //If true, setup is needed
+            // if(val)
+            {
+
+
+            }
+            // else //If false, demo stats needs to be removed.
+            {
+
+            }
+
+        }
+    }
+
 }

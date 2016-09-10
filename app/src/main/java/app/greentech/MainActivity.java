@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     //If Input was entered properly
                     case Activity.RESULT_OK:
                         Log.i("Action", "User added to stats");
-                        dataSource.addToStats(data.getStringExtra("Selection"));
+                        dataSource.addToStats(data.getStringExtra("Selection"), dataSource.getCurrentDate(), 1);
                         break;
                     //If RecycleActivity was backed away from or canceled
                     case Activity.RESULT_CANCELED:
