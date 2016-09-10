@@ -30,9 +30,6 @@ public class StatsDataSource
      */
     private SQLiteDatabase database;
 
-    private final short[][] demoStatsData = {{1,0,1,3,5}, {0,1,0,1,2}, {2,1,1,0,4}, {0,1,2,0,3},
-            {2,1,2,2,7}, {0,0,1,1,2}, {1,1,1,1,4}};
-
     /**
      * Constructor for the class
      * @param context
@@ -123,14 +120,14 @@ public class StatsDataSource
     {
         open();                             //Open the database connection
         ContentValues values;
-        Cursor todayTuple = getToday();     //Store reference to today's values
+        Cursor entry = getDateEntry(date);     //Store reference to today's values
 
-        if(todayTuple.getCount() > 0)       //If there is already an existing record for today
+        if(entry.getCount() > 0)       //If there is already an existing record for the day
         {
             values = new ContentValues();
-            values.put(getType(type), getTypeValue(type, date) +amount);
+            values.put(getType(type), getTypeValue(type, date) + amount);
             values.put(DBHelper.ATTR_SUM, getTypeValue("Total", date) + amount);
-            database.update(DBHelper.TABLE_STATS, values, DBHelper.ATTR_DATE + "= '" + date+ "'", null);
+            database.update(DBHelper.TABLE_STATS, values, DBHelper.ATTR_DATE + "= '" + date + "'", null);
 
         }
         else                                //Else create a new record for today
@@ -143,38 +140,6 @@ public class StatsDataSource
 
         }
 
-    }
-
-    public void removeFromStats(String type, String date, int amount)
-    {
-        open();                             //Open the database connection
-        ContentValues values;
-        Cursor todayTuple = getToday();     //Store reference to today's values
-
-        if(todayTuple.getCount() > 0)       //If there is already an existing record for today
-        {
-            values = new ContentValues();
-            values.put(getType(type), getTypeValue(type, date) +amount);
-            values.put(DBHelper.ATTR_SUM, getTypeValue("Total", date) + amount);
-            database.update(DBHelper.TABLE_STATS, values, DBHelper.ATTR_DATE + "= '" + date+ "'", null);
-
-        }
-        else                                //Else create a new record for today
-        {
-            values = new ContentValues();
-            values.put(DBHelper.ATTR_DATE, date);
-            values.put(getType(type), amount);
-            values.put(DBHelper.ATTR_SUM, amount);
-            database.insert(DBHelper.TABLE_STATS, null, values);
-
-        }
-
-    }
-
-    public void demoStats()
-    {
-        Handler handle = new Handler();
-        handle.post(new DemoSetup());
     }
 
     /**
@@ -193,10 +158,10 @@ public class StatsDataSource
      * Gets today's record from database
      * @return Reference to today's tuple
      */
-    public Cursor getToday()
+    public Cursor getDateEntry(String date)
     {
         Cursor cursor = database.rawQuery("SELECT * FROM " + DBHelper.TABLE_STATS +
-                                          " WHERE date = '"  + getCurrentDate() + "';", null);
+                                          " WHERE date = '"  + date + "';", null);
 
         return cursor;
     }
@@ -234,36 +199,6 @@ public class StatsDataSource
     public int getAmount(String type, String date)
     {
         return getTypeValue(type, date);
-    }
-
-    private class DemoSetup implements Runnable
-    {
-
-        @Override
-        public void run()
-        {
-            int i;
-            String date = getCurrentDate();
-            String[] parseDate = date.split("-");
-            short startDay = Short.valueOf(parseDate[2]);
-            Log.i("DEMOSTATS", "DATE IS" + startDay);
-            for(i = 7; i < 1; i--)
-            {
-               // Log.i("DEMOSTATS", "DATE IS" + startDay--);
-
-            }
-            //If true, setup is needed
-            // if(val)
-            {
-
-
-            }
-            // else //If false, demo stats needs to be removed.
-            {
-
-            }
-
-        }
     }
 
 }

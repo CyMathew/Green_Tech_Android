@@ -38,40 +38,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2783373-bcab-414f-9b4e-f31dec2d7ad0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_maps_utils_0_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/CustomFaqListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/faq_child.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/faq_parent.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_maps_utils_0_4_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/raw/water_geojson.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_maps_utils_0_4_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_maps_utils_0_4_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/fab_speed_dial_1_0_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/fab_speed_dial_1_0_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_vision_8_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_vision_8_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Faq.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Faq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Links.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Links.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/StatsDataSource.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/StatsDataSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_faqs.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_faqs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_links.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_links.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tips.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tips.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/extras_fab_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/extras_fab_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/raw/bin_geojson.json" afterPath="$PROJECT_DIR$/app/src/main/res/raw/bin_geojson.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/CustomLinksListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/Links/CustomLinksListAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/greentech/LinksItem.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/greentech/Links/LinksItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/stats_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="Green_Tech_Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,12 +95,12 @@
       <file leaf-file-name="Fragment_Map.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+            <state vertical-scroll-proportion="-7.6296296">
+              <caret line="172" column="54" selection-start-line="172" selection-start-column="50" selection-end-line="172" selection-end-column="54" />
               <folding>
-                <element signature="method#onViewCreated#0;class#Fragment_Map#0" expanded="false" />
-                <element signature="method#onClick#0;class#Fragment_Map#0" expanded="false" />
-                <element signature="method#onMapClick#0;class#Fragment_Map#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#5277#6258#0" expanded="true" />
+                <element signature="e#6257#6258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,9 +109,11 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.9811325">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <marker date="1473515094000" expanded="true" signature="10:1653" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,43 +121,43 @@
       <file leaf-file-name="Fragment_Stats.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="321" column="7" selection-start-line="321" selection-start-column="7" selection-end-line="321" selection-end-column="7" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="332" column="35" selection-start-line="332" selection-start-column="35" selection-end-line="332" selection-end-column="35" />
               <folding>
-                <element signature="docComment;method#setupBarChart#0;class#Fragment_Stats#0" expanded="false" />
-                <element signature="docComment;method#updateChartForDate#0;class#Fragment_Stats#0" expanded="false" />
-                <element signature="docComment;method#onValueSelected#0;class#Fragment_Stats#0" expanded="false" />
-                <element signature="method#onValueSelected#0;class#Fragment_Stats#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatsDataSource.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StatsDataSource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/StatsDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.575">
-              <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding>
-                <element signature="docComment;method#StatsDataSource#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="docComment;method#open#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="method#open#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="docComment;method#close#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="method#close#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="docComment;method#getType#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="method#getType#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="docComment;method#getTypeValue#0;class#StatsDataSource#0" expanded="false" />
-                <element signature="method#getTypeValue#0;class#StatsDataSource#0" expanded="false" />
+                <element signature="e#5741#5742#0" expanded="true" />
+                <element signature="e#5788#5789#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecycleActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/RecycleActivity.java">
+      <file leaf-file-name="SQLiteDatabase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/database/sqlite/SQLiteDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <caret line="1343" column="16" selection-start-line="1343" selection-start-column="16" selection-end-line="1343" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecycleActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/RecycleActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30340558">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -174,11 +166,9 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.37931">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,7 +176,7 @@
       <file leaf-file-name="stats_menu.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/stats_menu.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -196,12 +186,11 @@
       <file leaf-file-name="R.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/app/greentech/R.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0">
-              <caret line="3038" column="36" selection-start-line="3038" selection-start-column="36" selection-end-line="3038" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3047" column="36" selection-start-line="3047" selection-start-column="36" selection-end-line="3047" selection-end-column="36" />
               <folding>
-                <marker date="1473501815140" expanded="true" signature="264:1295" placeholder="{...}" />
-                <marker date="1473501815140" expanded="true" signature="1332:1451" placeholder="{...}" />
-                <marker date="1473501815140" expanded="true" signature="205357:205364" placeholder="{...}" />
+                <marker date="1473526299000" expanded="true" signature="264:1295" placeholder="{...}" />
+                <marker date="1473526299000" expanded="true" signature="1332:1366" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -227,7 +216,7 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="Green_Tech_Android" />
+              <option name="name" value="Green_Tech" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
@@ -238,7 +227,7 @@
                 <option name="path" value="$PROJECT_DIR$/app" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value="Green_Tech_Android" />
+                <option name="name" value="Green_Tech" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
@@ -252,7 +241,7 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'Green_Tech_Android'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'Green_Tech'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
@@ -261,17 +250,17 @@
                 <option name="name" value="clean" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'Green_Tech_Android'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'Green_Tech'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'Green_Tech_Android'." />
+                <option name="description" value="Displays all dependencies declared in root project 'Green_Tech'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'Green_Tech_Android'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'Green_Tech'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -286,22 +275,22 @@
                 <option name="name" value="init" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'Green_Tech_Android'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'Green_Tech'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'Green_Tech_Android'." />
+                <option name="description" value="Displays the sub-projects of root project 'Green_Tech'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'Green_Tech_Android'." />
+                <option name="description" value="Displays the properties of root project 'Green_Tech'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'Green_Tech_Android' (some of the displayed tasks may belong to subprojects)." />
+                <option name="description" value="Displays the tasks runnable from root project 'Green_Tech' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -1737,11 +1726,6 @@
         </entry>
       </map>
     </option>
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$" value="4416583290008" />
-      </map>
-    </option>
     <option name="projectBuildClasspath">
       <map>
         <entry key="$PROJECT_DIR$">
@@ -1917,30 +1901,30 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/abego/treelayout/org.abego.treelayout.core/1.0.1/org.abego.treelayout.core-1.0.1.jar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/multidex/1.0.0/multidex-1.0.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/google/m2repository/com/google/android/gms/play-services-location/8.4.0/play-services-location-8.4.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/google/m2repository/com/google/android/gms/play-services-vision/8.4.0/play-services-vision-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/multidex/1.0.0/multidex-1.0.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-location/8.4.0/play-services-location-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-vision/8.4.0/play-services-vision-8.4.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.maps.android/android-maps-utils/0.4.4/64c813aeb4655f50bf0a3e708fa0109ca2c1bd86/android-maps-utils-0.4.4.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.2.4/7abd1ecef320da6a7679b137083151401fe8bf43/MPAndroidChart-v2.2.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.yavski/fab-speed-dial/1.0.4/647b000e936aa05536f6a425554f0652eef9e9d9/fab-speed-dial-1.0.4.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diogobernardino/williamchart/2.2/a111ea4daae9f87df3b6be9504ea9d306bc0e417/williamchart-2.2.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/google/m2repository/com/google/android/gms/play-services-base/8.4.0/play-services-base-8.4.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/8.4.0/play-services-maps-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-base/8.4.0/play-services-base-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/8.4.0/play-services-maps-8.4.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/cardview-v7/23.3.0/cardview-v7-23.3.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.4.0/play-services-basement-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/cardview-v7/23.3.0/cardview-v7-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.4.0/play-services-basement-8.4.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/23.3.0/support-v4-23.3.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.3.0/appcompat-v7-23.3.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/support-vector-drawable/23.3.0/support-vector-drawable-23.3.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/animated-vector-drawable/23.3.0/animated-vector-drawable-23.3.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/design/23.3.0/design-23.3.0.aar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar" />
-                            <option value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.3.0/recyclerview-v7-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.3.0/support-v4-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.3.0/appcompat-v7-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-vector-drawable/23.3.0/support-vector-drawable-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/animated-vector-drawable/23.3.0/animated-vector-drawable-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/design/23.3.0/design-23.3.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.3.0/recyclerview-v7-23.3.0.aar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -2057,22 +2041,20 @@
         <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Faq.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/RecyclingBin.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/extras_fab_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/stats_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/default_preferences.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/StatsDataSource.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2099,6 +2081,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
@@ -2116,46 +2100,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Green_Tech_Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Green_Tech_Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2190,30 +2134,19 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Green_Tech_Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$PROJECT_DIR$/../../../AppData/Local/Android/Sdk" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../.android/avd/Nexus_5_API_23.ini" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.android/avd/Nexus_5_API_23.ini" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="T065002PYW" />
     <property name="SearchEverywhereHistoryKey" value="menu_items_&#9;PSI&#9;JAVA://app.greentech.R.id#menu_items_layout" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2510,7 +2443,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2518,9 +2451,8 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4229075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2782516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789317" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42284867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2528,7 +2460,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18550107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17900302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2541,6 +2473,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2782516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2562,59 +2495,89 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_faqs.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/RecycleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/stats_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/app/greentech/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3038" column="36" selection-start-line="3038" selection-start-column="36" selection-end-line="3038" selection-end-column="36" />
+          <folding>
+            <marker date="1473526299000" expanded="true" signature="264:1295" placeholder="{...}" />
+            <marker date="1473526299000" expanded="true" signature="1332:1366" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_faqs.xml">
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_links.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tips.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/DBHelper.java">
@@ -2646,71 +2609,53 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recycle.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/platforms/android-23/android.jar!/java/util/Calendar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.203703">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.3.0/appcompat-v7-23.3.0-sources.jar!/android/support/v7/widget/Toolbar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2722,14 +2667,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/bin_geojson.json">
@@ -2776,14 +2720,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/links_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2909093">
           <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="52" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Links.java">
@@ -2794,25 +2737,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/faq_child.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/faq_parent.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/faq_json.json">
@@ -2826,56 +2767,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1992#1993#0" expanded="true" />
-            <element signature="e#2048#2049#0" expanded="true" />
-            <element signature="e#2072#2073#0" expanded="true" />
-            <element signature="e#2135#2136#0" expanded="true" />
-            <element signature="e#2171#2172#0" expanded="true" />
-            <element signature="e#2912#2913#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#3032#3033#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_faqs.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_links.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tips.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Faq.java">
@@ -2895,23 +2817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.4/jars/classes.jar!/com/google/maps/android/clustering/ClusterManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.4/jars/classes.jar!/com/google/maps/android/MarkerManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2919,7 +2824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2943,25 +2847,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/app/greentech/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0">
-          <caret line="3038" column="36" selection-start-line="3038" selection-start-column="36" selection-end-line="3038" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3047" column="36" selection-start-line="3047" selection-start-column="36" selection-end-line="3047" selection-end-column="36" />
           <folding>
-            <marker date="1473501815140" expanded="true" signature="264:1295" placeholder="{...}" />
-            <marker date="1473501815140" expanded="true" signature="1332:1451" placeholder="{...}" />
-            <marker date="1473501815140" expanded="true" signature="205357:205364" placeholder="{...}" />
+            <marker date="1473526299000" expanded="true" signature="264:1295" placeholder="{...}" />
+            <marker date="1473526299000" expanded="true" signature="1332:1366" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/stats_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
@@ -2969,17 +2871,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.9811325">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1473515094000" expanded="true" signature="10:1653" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/database/sqlite/SQLiteDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1343" column="16" selection-start-line="1343" selection-start-column="16" selection-end-line="1343" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/RecycleActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="332" column="35" selection-start-line="332" selection-start-column="35" selection-end-line="332" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6296296">
+          <caret line="172" column="54" selection-start-line="172" selection-start-column="50" selection-end-line="172" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5277#6258#0" expanded="true" />
+            <element signature="e#6257#6258#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2991,56 +2917,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Map.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/StatsDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding>
-            <element signature="method#onViewCreated#0;class#Fragment_Map#0" expanded="false" />
-            <element signature="method#onClick#0;class#Fragment_Map#0" expanded="false" />
-            <element signature="method#onMapClick#0;class#Fragment_Map#0" expanded="false" />
+            <element signature="e#5741#5742#0" expanded="true" />
+            <element signature="e#5788#5789#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.37931">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/Fragment_Stats.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="321" column="7" selection-start-line="321" selection-start-column="7" selection-end-line="321" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;method#setupBarChart#0;class#Fragment_Stats#0" expanded="false" />
-            <element signature="docComment;method#updateChartForDate#0;class#Fragment_Stats#0" expanded="false" />
-            <element signature="docComment;method#onValueSelected#0;class#Fragment_Stats#0" expanded="false" />
-            <element signature="method#onValueSelected#0;class#Fragment_Stats#0" expanded="false" />
-          </folding>
+          <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/StatsDataSource.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/greentech/RecycleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.575">
-          <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#StatsDataSource#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="docComment;method#open#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="method#open#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="docComment;method#close#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="method#close#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="docComment;method#getType#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="method#getType#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="docComment;method#getTypeValue#0;class#StatsDataSource#0" expanded="false" />
-            <element signature="method#getTypeValue#0;class#StatsDataSource#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.30340558">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

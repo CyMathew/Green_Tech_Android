@@ -168,7 +168,7 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
                     findNearestLocation();
                 }
 
-                else if(menuItem.getTitle().equals("Recycle"))
+                else if(menuItem.getTitle().equals("Add Recycling Event"))
                 {
                     Intent intent = new Intent(getActivity(), RecycleActivity.class);
                     getActivity().startActivityForResult(intent, REQUEST_RECYCLE);

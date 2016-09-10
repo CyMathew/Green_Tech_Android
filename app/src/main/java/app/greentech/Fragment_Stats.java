@@ -35,6 +35,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Random;
 
 
 /**
@@ -108,7 +109,7 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        setHasOptionsMenu(true);
+        //setHasOptionsMenu(true);
 
         View view = inflater.inflate(R.layout.fragment_stats, container, false);
         lineChart = (LineChart) view.findViewById(R.id.chart_line);
@@ -120,6 +121,22 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         dateFormat = new SimpleDateFormat ("yyyy-MM-dd");
         dayMonthFormat = new SimpleDateFormat("MM-dd");
 
+        //Get Shared Preferences to see if Stats Demo data should be off or on
+        preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        Log.i("Pref", String.valueOf(preferences.getBoolean("init", false)));
+
+        //If Stats Demo data is on
+        if(!preferences.getBoolean("init", false))
+        {
+            //add random values to the 7 days of the week
+            SharedPreferences.Editor prefEdit = preferences.edit();
+            prefEdit.putBoolean("init", true);
+            prefEdit.putBoolean(demoPref_active, true);
+            Log.i("Pref", String.valueOf(preferences.getBoolean("init", false)));
+            prefEdit.commit();
+            demoSetup();
+        }
+
         //Initialize LineChart for viewing
         setupLineChart();
 
@@ -129,21 +146,6 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         //Initialize BarChart for viewing
         setupBarChart();
 
-        //Get Shared Preferences to see if Stats Demo data should be off or on
-        preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-        //If Stats Demo data is on
-        if(preferences.getBoolean("init", false))
-        {
-            //add random values to the 7 days of the week
-            SharedPreferences.Editor prefEdit = preferences.edit();
-            prefEdit.putBoolean("init", true);
-            prefEdit.putBoolean(demoPref_active, true);
-            prefEdit.commit();
-            //dataSource.demoSetup(true);
-        }
-
-        //else do nothing
 
         return view;
     }
@@ -166,7 +168,6 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
                 SharedPreferences.Editor prefEdit = preferences.edit();
                 prefEdit.putBoolean(demoPref_active, val);
                 prefEdit.commit();
-                dataSource.demoStats();
 
                 return true;
 
@@ -313,7 +314,28 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         barDataset.setBarSpacePercent(55f);
         barChart.setAutoScaleMinMaxEnabled(true);
 
+
         updateChartForDate(date);
+    }
+
+    private void demoSetup()
+    {
+        cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -7);
+
+        Random r = new Random();
+
+        for(int i = 0; i < 7; i++)
+        {
+            cal.add(Calendar.DATE, 1);
+            date = dateFormat.format(cal.getTime());
+
+            dataSource.addToStats("Paper", date, r.nextInt(3 - 0));
+            dataSource.addToStats("Glass", date, r.nextInt(3 - 0));
+            dataSource.addToStats("Aluminum", date, r.nextInt(3 - 0));
+            dataSource.addToStats("Plastic", date, r.nextInt(3 - 0));
+        }
+
     }
 
     /**
