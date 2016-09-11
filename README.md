@@ -6,14 +6,20 @@ GreenTech is an Android app made for the Texas Tech Community to help find nearb
 ## Features
 
 * Navigation Directions to a selected recycling bin
-    ![Google Maps Nav Directions](https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/GoogleNav_shot.png)
+    <img alt="Google Maps Nav Directions" src="https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/GoogleNav_shot.png" width="360" height="640" />
+
 * Quick Find of recycling bin nearest to you
-    ![Floating Action Button Options](https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/fab_shot_zoomed.png)
+    <img alt="Floating Action Button" src="https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/fab_shot_zoomed.png" width="300" height="300" />
+   
 * Daily Statistics Tracking of what you've recycled
-    ![Statistics](https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/Stats_shot.png)
+    <img alt="Statistics" src="https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/Stats_shot.png" width="360" height="640" />
+
 * Tips on how to use the app
-    ![Tips](https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/Tips_shot.png)
+    <img alt="Tips" src="https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/Tips_shot.png" width="360" height="640" />
+    
 * Links to websites for more information
-     ![Links](https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/Links_shot.png)
+    <img alt="Links" src="https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/Links_shot.png" width="360" height="640" />
+     
 * Answers to Frequently Asked Questions
-    ![FAQs](https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/FAQ_shot.png)
+    <img alt="FAQs" src="https://github.com/CyMath/Green_Tech_Android/blob/master/Github/Images/FAQ_shot.png" width="360" height="640" />
+
