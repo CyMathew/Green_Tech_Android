@@ -6,11 +6,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import app.greentech.R;
 
 /**
- * Created by Cyril on 3/3/16.
+ * Fragment for Tips used to share About information with user and also direct them the Tips Activity for more detailed tips
+ * @author Cyril Mathew
  */
 public class Fragment_Tips extends Fragment {
 

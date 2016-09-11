@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -15,6 +16,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 /**
  * MainActivity of GreenTech Recycling App. Houses all the fragments that switched to/from using the Navigation Drawer
@@ -66,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      * Constant as flag to determine if it was RecycleActivity that finished
      */
     private final static int REQUEST_RECYCLE = 0x1;
+
+    public  final static int PERMISSIONS_REQUEST_MAPS_RECEIVE = 0x2;
 
     /**
      * Public declaration of database connection to be used with other classes and activities.
@@ -225,4 +230,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    /**
+     * Click handler for when the TipsImageButton has been clicked
+     * @param view
+     */
+    public void onTipsFrontClick(View view) {
+        //Toast.makeText(this, "WOOOOOOO", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, TipsActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Method handler for when a request permission dialog box is finished.
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST_MAPS_RECEIVE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                } else {
+
+                    Toast.makeText(this, "Location related actions won't work", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
 }

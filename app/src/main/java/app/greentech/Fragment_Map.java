@@ -3,21 +3,20 @@ package app.greentech;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,6 +33,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
 import com.google.maps.android.geojson.GeoJsonPoint;
+
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import io.github.yavski.fabspeeddial.FabSpeedDial;
 import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
@@ -70,12 +73,6 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
      * ArrayLists to hold marker locations after processing from geoJSON
      */
     private ArrayList<Marker> binList;
-
-
-    /**
-     * LinearLayout that holds all the filters
-     */
-    private LinearLayout filters;
 
     /**
      * Floating Action Button for when a marker is selected
@@ -139,31 +136,20 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
                         public void onProviderDisabled(String provider) {}
                     });
         }
-        catch (SecurityException e)
-        {
-            e.printStackTrace();    //TODO: FIX THIS EXCEPTION
+        catch (SecurityException e) {
+            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.MAPS_RECEIVE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.MAPS_RECEIVE}, MainActivity.PERMISSIONS_REQUEST_MAPS_RECEIVE);
+            }
         }
 
         directionsFab = (FloatingActionButton) v.findViewById(R.id.fab_directions);
         extrasFab = (FabSpeedDial) v.findViewById(R.id.fab_extras);
-        filters = (LinearLayout) v.findViewById(R.id.layout_checkbox);
 
         extrasFab.setMenuListener(new SimpleMenuListenerAdapter() {
             @Override
             public boolean onMenuItemSelected(MenuItem menuItem) {
 
-                if(menuItem.getTitle().equals("Filters"))
-                {
-                    if(filters.getVisibility() == View.VISIBLE) {
-                        filters.setVisibility(View.INVISIBLE);
-                    }
-                    else
-                    {
-                        filters.setVisibility(View.VISIBLE);
-                    }
-                }
-
-                else if(menuItem.getTitle().equals("Quick Find"))
+                if(menuItem.getTitle().equals("Quick Find"))
                 {
                     findNearestLocation();
                 }
@@ -238,9 +224,12 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         try {
             binLayer = new GeoJsonLayer(mapView.getMap(), R.raw.bin_geojson, getActivity().getApplicationContext());
 
-        } catch (Exception e) {
-            e.printStackTrace(); //TODO: FIX THIS TO ACTUALLY CATCH THE EXCEPTION
-
+        } catch (JSONException e) {
+            Log.e("JSON Error", "GEOJSON input was malformed");
+        }
+        catch (IOException e)
+        {
+            Log.e("IO Error", "Couldn't find/use GEOJSON file");
         }
 
         addMarkers(binLayer);
@@ -253,7 +242,12 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
 
         try{
             gMap.setMyLocationEnabled(true);}
-        catch (SecurityException e) {e.printStackTrace();} //TODO: FIX THIS TO ACTUALLY CATCH THE EXCEPTION
+        catch (SecurityException e)
+        {
+            //If location permission hasn't been given, let user know
+            if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                Toast.makeText(getActivity(), "Location permissions are lacking", Toast.LENGTH_SHORT).show();
+        }
 
         //default camera location
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(33.586513, -101.883885), 14));
@@ -387,8 +381,10 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback, OnMark
         extrasFab.show();
     }
 
+    /**
+     * Override method used to keep track of when location has changed
+     * @param location
+     */
     @Override
     public void onLocationChanged(Location location) {}
-
-
 }

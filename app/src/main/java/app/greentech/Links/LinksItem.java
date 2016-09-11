@@ -1,7 +1,8 @@
 package app.greentech.Links;
 
 /**
- * Created by Cyril on 8/8/2016.
+ * Class created to store information about each Link object
+ * @author Cyril Mathew
  */
 public class LinksItem {
 

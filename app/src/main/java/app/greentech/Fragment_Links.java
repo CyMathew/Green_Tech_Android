@@ -17,7 +17,8 @@ import app.greentech.Links.CustomLinksListAdapter;
 import app.greentech.Links.LinksItem;
 
 /**
- * Created by Cyril on 3/3/16.
+ * Links fragment to display useful links to the user
+ * @author Cyril Mathew
  */
 public class Fragment_Links extends Fragment {
 
@@ -30,6 +31,8 @@ public class Fragment_Links extends Fragment {
         ArrayList image_details = getListData();
         final ListView lv1 = (ListView) v.findViewById(R.id.links_listView);
         lv1.setAdapter(new CustomLinksListAdapter(getActivity().getApplicationContext(), image_details));
+
+        //When a list item within the link is clicked, open a web browser using that link's URL
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -45,7 +48,12 @@ public class Fragment_Links extends Fragment {
         return v;
     }
 
-    private ArrayList getListData() {
+    /**
+     * Puts together the data within the links
+     * @return ArrayList that holds all link information
+     */
+    private ArrayList getListData()
+    {
         ArrayList<LinksItem> results = new ArrayList<LinksItem>();
         String[] linkTitles = getResources().getStringArray(R.array.LinkTitles);
         String[] linkSubtitles = getResources().getStringArray(R.array.LinkSubtitles);
@@ -54,10 +62,14 @@ public class Fragment_Links extends Fragment {
         for(int i = 0; i < linkTitles.length; i++)
         {
             linksData = new LinksItem();
+
+            //Set the link title from the list of titles
             linksData.setTitle(linkTitles[i]);
+
+            //Set the link subtitle from the list of titles
             linksData.setSubtitle(linkSubtitles[i]);
 
-
+            //Use if statement to add logos to the links based on title
             if(linkTitles[i].toLowerCase().contains("ttu"))
             {
                 linksData.setImage(R.drawable.ttu_logo);
@@ -66,7 +78,6 @@ public class Fragment_Links extends Fragment {
             {
                 linksData.setImage(R.drawable.epa_logo);
             }
-
 
             results.add(linksData);
         }

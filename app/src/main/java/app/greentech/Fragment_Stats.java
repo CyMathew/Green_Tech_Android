@@ -318,6 +318,9 @@ public class Fragment_Stats extends Fragment implements OnChartValueSelectedList
         updateChartForDate(date);
     }
 
+    /**
+     * Setups the charts for demo values to be shown
+     */
     private void demoSetup()
     {
         cal = Calendar.getInstance();

@@ -10,7 +10,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/stats_chartHeadingSize"
+        android:textStyle="bold"
         android:text="Weekly Total"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/textColor_Regular" />
 
    <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart_line"
@@ -26,7 +33,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/stats_chartHeadingSize"
+        android:textStyle="bold"
         android:text="Daily Total"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/textColor_Regular" />
 
     <com.github.mikephil.charting.charts.HorizontalBarChart
         android:id="@+id/chart_bar"

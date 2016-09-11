@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="app.greentech.TipsActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:paddingBottom="30dp"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:text="@string/tips_heading"/>
+
+            <!--Tip 1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/tips_imageViewSize"
+                    android:layout_height="@dimen/tips_imageViewSize"
+                    android:src="@drawable/fab_shot_zoomed"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/tips_tvPadding"
+                        android:paddingRight="@dimen/tips_tvPadding"
+                        android:layout_gravity="top"
+                        android:textStyle="bold"
+                        android:text="@string/tip1_title"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/tips_tvPadding_top"
+                        android:paddingLeft="@dimen/tips_tvPadding"
+                        android:paddingRight="@dimen/tips_tvPadding"
+                        android:textSize="@dimen/tips_tvTextSize"
+                        android:text="@string/tip1_explain"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Tip 2 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/tips_imageViewSize"
+                    android:layout_height="@dimen/tips_imageViewSize"
+                    android:src="@drawable/selectedmarker_shot_zoomed"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/tips_tvPadding"
+                        android:paddingRight="@dimen/tips_tvPadding"
+                        android:layout_gravity="top"
+                        android:textStyle="bold"
+                        android:text="@string/tip2_title"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/tips_tvPadding_top"
+                        android:paddingLeft="@dimen/tips_tvPadding"
+                        android:paddingRight="@dimen/tips_tvPadding"
+                        android:textSize="@dimen/tips_tvTextSize"
+                        android:text="@string/tip2_explain"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

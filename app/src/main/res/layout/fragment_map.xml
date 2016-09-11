@@ -38,35 +38,4 @@
         app:miniFabDrawableTint="?attr/colorPrimaryDark"
         app:miniFabTitleTextColor="?attr/colorPrimaryDark" />
 
-    <LinearLayout
-        android:id="@+id/layout_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="5dp"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:text="Show"/>
-
-        <CheckBox
-            android:id="@+id/toggle_bins"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="Recycling Bins" />
-
-        <CheckBox
-            android:id="@+id/toggle_water"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="Water Refill" />
-    </LinearLayout>
 </FrameLayout>

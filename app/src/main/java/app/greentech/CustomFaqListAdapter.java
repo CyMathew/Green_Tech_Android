@@ -10,32 +10,65 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+/**
+ * Custom List Adapter for FAQ Fragment and its ExpandableListView
+ * @author Cyril Mathew
+ */
 public class CustomFaqListAdapter extends BaseExpandableListAdapter {
 
-    private Context _context;
-    private List<String> _listDataHeader; // header titles
-    // child data in format of header title, child title
-    private List<String> _listDataChild;
+    /**
+     * Application Context
+     */
+    private Context context;
+
+    /**
+     * List of questions
+     */
+    private List<String> listDataHeader;
+
+    /**
+     * List of answers
+     */
+    private List<String> listDataChild;
 
     public CustomFaqListAdapter(Context context, List<String> listDataHeader,
                                  List<String> listChildData) {
-        this._context = context;
-        this._listDataHeader = listDataHeader;
-        this._listDataChild = listChildData;
+        this.context = context;
+        this.listDataHeader = listDataHeader;
+        this.listDataChild = listChildData;
     }
 
+    /**
+     * Gets the child of a certain parent
+     * @param groupPosition
+     * @param childPosititon
+     * @return Child object of a parent
+     */
     @Override
     public Object getChild(int groupPosition, int childPosititon) {
-        return this._listDataChild.get(groupPosition);
+        return this.listDataChild.get(groupPosition);
     }
 
-
-
+    /**
+     * Gets the ID of a child pointed to by groupPosition and childPosition
+     * @param groupPosition
+     * @param childPosition
+     * @return The child's position as a number
+     */
     @Override
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
+    /**
+     * Create the view of the child
+     * @param groupPosition
+     * @param childPosition
+     * @param isLastChild
+     * @param convertView
+     * @param parent
+     * @return Fully inflated view of a child
+     */
     @Override
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
@@ -43,7 +76,7 @@ public class CustomFaqListAdapter extends BaseExpandableListAdapter {
         final String childText = (String) getChild(groupPosition, childPosition);
 
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
+            LayoutInflater infalInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.faq_child, null);
         }
@@ -56,12 +89,12 @@ public class CustomFaqListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getGroup(int groupPosition) {
-        return this._listDataHeader.get(groupPosition);
+        return this.listDataHeader.get(groupPosition);
     }
 
     @Override
     public int getGroupCount() {
-        return this._listDataHeader.size();
+        return this.listDataHeader.size();
     }
 
     @Override
@@ -74,12 +107,20 @@ public class CustomFaqListAdapter extends BaseExpandableListAdapter {
         return groupPosition;
     }
 
+    /**
+     * Setup of the entire expandable listview's parents
+     * @param groupPosition
+     * @param isExpanded
+     * @param convertView
+     * @param parent
+     * @return Fully inflated/setup parents
+     */
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
+            LayoutInflater infalInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.faq_parent, null);
         }
